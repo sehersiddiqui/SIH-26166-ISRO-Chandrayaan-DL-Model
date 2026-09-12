@@ -1,0 +1,2 @@
+selected_ransac_threshold_px,cases,successful,success_rate,median_inlier_rmse,mean_inlier_rmse,median_inlier_ratio,mean_inlier_ratio,mean_true_inlier_precision,mean_true_inlier_recall,mean_rotation_error_deg,mean_scale_error,mean_translation_error
+12.0,2000,1645,0.8225,5.816903165404843e-06,1.9531080097886389,0.9100111347302359,0.7763850410144628,0.999837634109377,0.89727125,0.09726338144149027,0.0015923979532153712,2.0289850975846893

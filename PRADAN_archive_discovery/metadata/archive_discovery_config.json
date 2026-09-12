@@ -1,0 +1,34 @@
+{
+  "project_root": "D:\\ISRO",
+  "pradan_pages": {
+    "TMC2": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml?id=tmc2",
+    "OHRC": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml?id=ohrc",
+    "IIRS": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml?id=iirs"
+  },
+  "geographic_buffer_km": 50.0,
+  "max_correspondence_distance_m": 300.0,
+  "max_selected_observations": 50,
+  "download_enabled": false,
+  "existing_coverage": [
+    {
+      "instrument": "OHRC",
+      "manifest": "D:\\ISRO\\OHRC_tiles\\ohrc_manifest.csv",
+      "n_rows": 900,
+      "n_valid_coords": 900,
+      "lat_min": 7.337989838199999,
+      "lat_max": 8.1522256499,
+      "lon_min": 296.09565009,
+      "lon_max": 296.19746685
+    },
+    {
+      "instrument": "IIRS",
+      "manifest": "D:\\ISRO\\IIRS_tiles\\iirs_manifest.csv",
+      "n_rows": 47,
+      "n_valid_coords": 47,
+      "lat_min": -6.1714605892000005,
+      "lat_max": 26.021798552,
+      "lon_min": 354.90061000000003,
+      "lon_max": 356.18689532
+    }
+  ]
+}

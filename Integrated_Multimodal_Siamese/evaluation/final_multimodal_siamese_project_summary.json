@@ -1,0 +1,19 @@
+{
+  "project": "Chandrayaan-2 Multi-Modal Lunar Image Correspondence",
+  "modalities": "IIRS, OHRC, TMC-2",
+  "embedding_dimension": 256,
+  "shared_space_dimension": 256,
+  "final_head_architecture": "256-512-256 with LayerNorm, GELU, Dropout(0.10), L2 normalization",
+  "final_head_trainable_parameters": 263936,
+  "temperature": 0.07,
+  "training_anchors": 280,
+  "validation_anchors": 60,
+  "test_anchors": 60,
+  "test_examples": 2040,
+  "robustness_scenarios": 34,
+  "best_epoch": 100,
+  "best_validation_loss": 4.2825398445129395,
+  "benchmark_type": "controlled_synthetic",
+  "real_geographic_correspondence_available": false,
+  "real_world_performance_claim": false
+}

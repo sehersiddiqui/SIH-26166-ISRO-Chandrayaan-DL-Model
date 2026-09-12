@@ -1,0 +1,61 @@
+CHANDRAYAAN-2 MULTIMODAL LUNAR IMAGE CORRESPONDENCE
+FINAL MODEL REPORT
+======================================================================
+
+Modalities: IIRS, OHRC, TMC-2
+Embedding dimension: 256
+Shared-space dimension: 256
+Final shared head: 256-512-256 with LayerNorm, GELU, Dropout(0.10), L2 normalization
+Trainable parameters: 263,936
+Best epoch: 100
+Best validation loss: 4.282540
+Training anchors: 280
+Validation anchors: 60
+Test anchors: 60
+Test examples: 2040
+Robustness scenarios: 34
+
+Held-out test results
+----------------------------------------------------------------------
+
+IIRS_TMC2
+Recall@1: 0.019118
+Recall@5: 0.126471
+Recall@10: 0.266176
+Median rank: 19.00
+Mean rank: 36.13
+Worst rank: 1656
+Positive cosine: 0.647973
+Negative cosine: 0.019394
+Positive-negative gap: 0.628579
+
+OHRC_TMC2
+Recall@1: 0.015196
+Recall@5: 0.119118
+Recall@10: 0.247059
+Median rank: 20.00
+Mean rank: 38.63
+Worst rank: 1660
+Positive cosine: 0.647833
+Negative cosine: 0.018501
+Positive-negative gap: 0.629331
+
+IIRS_OHRC
+Recall@1: 0.150000
+Recall@5: 0.335784
+Recall@10: 0.475490
+Median rank: 12.00
+Mean rank: 63.89
+Worst rank: 1683
+Positive cosine: 0.651127
+Negative cosine: 0.014037
+Positive-negative gap: 0.637090
+
+
+Methodological status
+----------------------------------------------------------------------
+Benchmark type: controlled synthetic correspondence.
+Test set: 60 completely held-out anchors across 34 robustness scenarios.
+Real geographic cross-modal positive pairs are currently unavailable.
+Therefore, results are architecture and robustness validation only.
+No real-world geographic correspondence performance claim is made.

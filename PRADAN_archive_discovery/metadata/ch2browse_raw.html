@@ -1,0 +1,358 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt2"><link type="text/css" rel="stylesheet" href="/ch2/javax.faces.resource/theme.css.xhtml?ln=primefaces-aristo" /><link type="text/css" rel="stylesheet" href="/ch2/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=6.1" /><link type="text/css" rel="stylesheet" href="/ch2/javax.faces.resource/layout/layout.css.xhtml?ln=primefaces&amp;v=6.1" /><script type="text/javascript" src="/ch2/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=6.1"></script><script type="text/javascript" src="/ch2/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=6.1"></script><script type="text/javascript" src="/ch2/javax.faces.resource/core.js.xhtml?ln=primefaces&amp;v=6.1"></script><script type="text/javascript" src="/ch2/javax.faces.resource/components.js.xhtml?ln=primefaces&amp;v=6.1"></script><script type="text/javascript" src="/ch2/javax.faces.resource/layout/layout.js.xhtml?ln=primefaces&amp;v=6.1"></script><link type="text/css" rel="stylesheet" href="/ch2/javax.faces.resource/pradanStyle.css.xhtml?ln=css" /><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';}</script>
+        <script type="text/javascript">
+            
+            window.onload = function () {
+                fetchRecommendations();
+            }
+            
+            function showStatus() {
+            PF('statusDialog').show();
+            }
+            function hideStatus() {
+            PF('statusDialog').hide();
+            }
+            function hideAndRefresh() {
+            hideStatus();
+            pageRefresh();
+            }            
+            
+            //TODO: remove extras related to browser based bulk download and related old interface
+//            function bulkDownloadConfirmation(){
+//                var table1=document.getElementById("tableForm:selectedDocTable_data");
+//                var files1=[];
+//                var row1=table1.rows;
+//            
+//                if((row1[0].cells)[0].innerHTML === "No records found.")
+//                {
+//                    alert("No data selected. Please select the data products for download using the select tool box.");
+//                }
+//                else{
+//                    for(var i=0;i < row1.length;i++){
+//                        var cell1=row1[i].cells;
+//                        files1.push(cell1[0].innerHTML);     
+//                    }
+//                    PF('confirmDownload').show();
+//                } 
+//            }
+//         
+//         
+//            function isConfirm(answer1){
+//                if(answer1===true){
+//                   PF('confirmDownload').hide();
+//                   PF('confirmMsg').show();
+//                }
+//                else{
+//                   PF('confirmDownload').hide();
+//                }
+//            }
+//            
+//            
+//            function confirmOk(answer2){  
+//                if(answer2===true){
+//                    showStatus();
+//                    bulkDownload();
+//                    PF('confirmMsg').hide();
+//                }
+//                else{
+//                      PF('confirmMsg').hide();
+//                }
+//            }
+//            
+//           
+//            var currentIndex=0;
+//        
+//        
+//            function bulkDownload(){
+////                $('#tableForm\\:bulkDownload').hide();
+//                $('#bulkProgress').show();
+//                $('#bulkProgress_text').show();
+//                 
+//                var bulkProgress=document.getElementById("bulkProgress");
+//                var bulkProgress_text=document.getElementById("bulkProgress_text");
+//
+////                var selectIndex=document.getElementById("tableForm:startIndex").value;
+////                selectIndex=parseInt(selectIndex);
+//                var selectIndex=1;
+//
+//                var table=document.getElementById("tableForm:selectedDocTable_data");
+//                var files=[];
+//                var row=table.rows;
+//
+//                for(var i=0;i < row.length;i++){
+//                    var cell=row[i].cells;
+//                    if(cell[0].innerHTML) {
+//                        files.push(cell[0].innerHTML);     
+//                    }
+//                }
+//                
+//                if (currentIndex < files.length) {
+//                    const xhr = new XMLHttpRequest();
+//                    xhr.responseType = "blob";
+//                    xhr.onload = function() {
+//
+//                        if (this.status === 200) {
+//                            const a = document.createElement('a');
+//                            a.href = window.URL.createObjectURL(new Blob([this.response], {
+//                                type: 'application/octet-stream' }));
+//                            a.download = getFilename(files[currentIndex]);
+//                            document.body.appendChild(a);
+//                            a.click();
+//                            document.body.removeChild(a);
+//                            currentIndex++;
+//                            bulkDownload();
+//                        }
+//                        else {
+//                                if(this.status === 401){
+//                                showError("Access Denied");
+//                            }
+//                            else if(this.status === 403){
+//                                showError("Exceeded maximum number of downloads, login again to continue.");
+//    //                            const xpath=document.evaluate("/html/body/div[1]/div[2]/div[1]/div/p",document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue;
+//    //                            const xpath=document.evaluate("/html/body/div[1]/div[2]/div[1]/div/div/div/ul/li/span[1]",document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue;                
+//    //                            console.log("Xpath--"+xpath.innerHTML);
+//
+//
+//                            }
+//                            else if(this.status === 302){
+//                                showError("Session Expired, login again to continue.");
+//                            }
+//                            else{
+//                                showError("Something Went Wrong");
+//                            }
+//                            currentIndex=0;
+//                            hideStatus();
+//                        }
+//                   };
+//
+//
+//                   xhr.onprogress = function(event) {
+//
+//                    if (this.status === 200){
+//                        if (event.lengthComputable) {
+//                            
+//                            bulkProgress.max=event.total;
+//                            bulkProgress.value=event.loaded;
+//
+//                            var percent=(event.loaded/event.total)*100;
+//                            console.log("File " + (currentIndex + 1) + " Download Progress:" + percent.toFixed(2) + "%");
+//
+//                            percent=Math.floor(percent);
+//                            bulkProgress_text.innerHTML="File "+(selectIndex+currentIndex)+" ("+getFilename(files[currentIndex])+")->"+percent +"%";
+//                            
+//                            if((event.total === event.loaded) && (currentIndex === files.length-1)) {
+//                                hideStatus();
+//                                alert("Bulk Downloads Complete!");
+//                            }
+//                            
+//                            window.onload = function () {
+//                                fetchRecommendations();
+//                            }
+//                        }             
+//                    }
+//                };
+//                
+//                xhr.open('GET', files[currentIndex]);
+//                xhr.send();
+//            }
+//            else {
+//                currentIndex = 0;
+//            }
+//        }
+//        
+//        function getFilename(filepath){
+//            return filepath.split('/').pop().split('?')[0];
+//        }
+//
+//        function showError(msg){
+//            document.getElementById('errorMsg').innerHTML=msg;
+//            PF('errorMsgDialog').show();
+//        }
+        
+        </script>
+        <title>Chandrayaan-II</title></head><body>
+        <div id="page" style="min-width: 1000px;">
+
+            <div id="header"><script type="text/javascript" src="/ch2/javax.faces.resource/pradan.js.xhtml?ln=scripts"></script>
+
+            <style>
+                .ui-layout-pane
+                {
+                    z-index: 1000 !important;
+                }
+            </style>
+
+            <div id="header" style="width: 100%;">
+                <div style="background: #25283d;">
+                    <img src="/ch2/images/isro logo-1X.png" class="isroLogo" />
+                    <div class="header">
+                        <h1 class="headerIsda">ISRO Science Data Archive (ISDA)</h1>
+                        <h1 class="headerMissionName">Chandrayaan-II</h1>
+                    </div>
+                </div><script id="j_idt9_s" type="text/javascript">$(function(){PrimeFaces.cw("Layout","widget_j_idt9",{id:"j_idt9",center:{paneSelector:'#j_idt10',size:"auto",resizable:false,closable:false},east:{paneSelector:'#idpMenu',size:"140",resizable:false,closable:false}});});</script><div id="j_idt9" style="width:100%; height: 60px; border: none; padding: 0px; margin: 0px;" class="ui-lg-12"><div id="j_idt10" class="ui-layout-unit ui-widget ui-widget-content ui-corner-all ui-layout-center" style="border: none; padding: 0px; margin: 0px;"><div class="ui-layout-unit-content ui-widget-content"><div id="j_idt11" class="ui-menu ui-menubar ui-widget ui-widget-content ui-corner-all ui-helper-clearfix navMenu" style="border-bottom: 4px solid orange !important;" role="menubar"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent headerMenuHighlight" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-text">Home</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenuHighlight" href="/ch2/index.xhtml"><span class="ui-menuitem-text">CH2Browse</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" href="https://pradan.issdc.gov.in"><span class="ui-menuitem-text">PRADAN</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" rel="noopener noreferrer" href="https://www.issdc.gov.in/isda.html" target="_blank"><span class="ui-menuitem-text">ISDA</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" rel="noopener noreferrer" href="https://www.issdc.gov.in" target="_blank"><span class="ui-menuitem-text">ISSDC</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" rel="noopener noreferrer" href="https://www.istrac.gov.in" target="_blank"><span class="ui-menuitem-text">ISTRAC</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" rel="noopener noreferrer" href="https://www.isro.gov.in" target="_blank"><span class="ui-menuitem-text">ISRO</span></a></li></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/ch2/protected/payload.xhtml"><span class="ui-menuitem-text">Browse and Download</span></a></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent " role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-text">My Data Downloads</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" href="/ch2/protected/history.xhtml"><span class="ui-menuitem-text">History</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" href="/ch2/protected/statistics.xhtml"><span class="ui-menuitem-text">Statistics</span></a></li></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/ch2/protected/miscDownloads.xhtml"><span class="ui-menuitem-text">Other Downloads</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/ch2/faq.xhtml"><span class="ui-menuitem-text">FAQ</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/ch2/ack.xhtml"><span class="ui-menuitem-text">Acknowledgement</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/ch2/disclaimer.xhtml"><span class="ui-menuitem-text">Disclaimer</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/ch2/contacts.xhtml"><span class="ui-menuitem-text">Contacts</span></a></li></ul></div><script id="j_idt11_s" type="text/javascript">PrimeFaces.cw("Menubar","widget_j_idt11",{id:"j_idt11",autoDisplay:true});</script></div></div><div id="idpMenu" class="ui-layout-unit ui-widget ui-widget-content ui-corner-all ui-layout-east navLogin"><div class="ui-layout-unit-content ui-widget-content"><div id="j_idt30" class="ui-menu ui-menubar ui-widget ui-widget-content ui-corner-all ui-helper-clearfix" style="background: orange;border: none" role="menubar"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" style="color: black !important" href="/ch2/protected/payload.xhtml"><span class="ui-menuitem-text">Login/Signup</span></a></li></ul></div><script id="j_idt30_s" type="text/javascript">PrimeFaces.cw("Menubar","widget_j_idt30",{id:"j_idt30",autoDisplay:true});</script></div></div></div>
+                
+                <br />
+
+            </div>
+            </div>
+
+            <div id="page-content" style="position: absolute; width: 100%; " align="center">
+                
+                <div id="content" style="min-height: 500px;">
+                <div id="content" style="width: 90%; " align="justify">
+                    
+                    <h1 style="font-style: italic;font-weight: bolder;font-family: Cambria;text-align: center;margin-bottom: 30px;margin-top: 15px;">Chandrayaan-2</h1>
+                    
+                    <div style="margin-top: 10px;margin-bottom: 40px;border-radius: 30px;">
+                        
+                        <fieldset style="                                   width: 500px;                                   margin: auto;                                   ">
+                            <legend style="                                     margin: auto;                                     ">
+                                <div class="accessDataDiv accessDataLink">
+                                    Access Data
+                                </div>
+                            </legend>
+                            <table>
+                                <tbody><tr>
+                                        <td style="                                             width: 50%;                                             text-align: center;                                             padding-top: 20px;                                             font-size: 1.2em;                                             ">
+                                            <a href="/ch2/protected/payload.xhtml">Table View</a>
+                                        </td>
+                                        <td style="                                             width: 50%;                                             text-align: center;                                             padding-top: 20px;                                             font-size: 1.2em;                                             ">
+                                            <a href="https://chmapbrowse.issdc.gov.in" target="_blank" rel="noopener noreferrer">Map View</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="                                             padding: 5px;                                             font-size: 0.9em;                                             background-color: lightgray;                                             border-right: 10px solid white;                                             ">(All Payloads: CLASS, XSM, CHACE-2, DFRS, OHRC TMC-2, IIRS, SAR + SPICE)
+                                        </td>
+                                        <td style="                                             padding: 5px;                                             font-size: 0.9em;                                             background-color: lightgray;                                             border-left: 10px solid white;                                             ">(Payloads: OHRC, TMC-2, IIRS, SAR)</td>
+                                    </tr>
+                                </tbody></table>
+
+                        </fieldset>
+                        
+                    
+                        
+                        
+                        
+
+                    </div>
+                    
+                    <div style="padding: 10px;padding-top: 0px;padding-bottom: 28px;">
+                        
+                    
+
+                    <div style="float: right;text-align: center;position: relative;padding: 10px;padding-bottom: 0px;border-left-width: 0px;border-left-style: solid;padding-left: 15px;padding-right: 0px;padding-top: 0px;bottom: 25px;width: 250px;">
+                        
+                        <a href="https://chmapbrowse.issdc.gov.in" target="_blank" rel="noopener noreferrer">
+                            <img src="images/payloads/map-browse.png" alt="CH2 Map Browse" width="240" />
+                            <span style="                                   position: absolute;                                   top: 50%;                                   left: 50%;                                   font-size: 1.875rem;                                   font-weight: 700;                                   transform: translate(-50%, -50%);                                   color: #73ee0b;                                   ">
+                                
+                                <img src="images/payloads/location-icon.png" alt="location" width="40px" style="                                      " /> MapBrowse
+                            </span>
+                            <br />Try Chandrayaan-2 data map browse and download application
+                        </a>
+                    </div>
+            
+
+                    <p>
+                        The Chandrayaan-2 mission was successfully launched on 22nd July 2019 at 14:43 hrs by GSLV MkIII-M1 from Satish Dhawan Space Centre (SDSC), Sriharikota.  After a series of Earth bound manoeuvres, the spacecraft entered into Lunar Transfer Trajectory (LTT) on August 14th.  Lunar Orbit Insertion (LOI) manoeuvre was performed on August 20th, thereby Chandrayaan-2 was successfully inserted into the elliptical orbit around the Moon.  This was followed by a series of Lunar bound orbit maneuvers for reducing the orbit to circular polar orbit around the Moon.  
+                    </p>
+                    <p>
+                        On September 2nd, Vikram lander separated from the Orbiter and de-orbiting maneuver was performed to reduce the orbit to 35 km x 101 km.  Vikram landing was attempted on 7th September and it followed the planned descent trajectory from its orbit of 35 km to around 2 km above the surface. Communication with lander and ground station was lost.  All the systems and sensors of the Lander functioned excellently until this point and proved many new technologies such as variable thrust propulsion technology used in the Lander.  However, the Orbiter is healthy and all the payloads are operational.
+                    </p>
+                    <p>
+                        Chandrayaan-2 Orbiter is currently in a 100 km x 100 km orbit around the Moon, carries 8 experiments for studies ranging from surface geology and composition to exospheric measurements that would continue to build upon the understanding from previous lunar missions.
+                    </p>
+                    </div>
+                    
+                    
+                    <br />
+                    <p>
+                        <figure class="imgRight">
+                            <img src="images/payloads/CLASS.jpg" alt="CLASS payload image" class="fullMaxWidth" />
+                            <figcaption>CLASS</figcaption>
+                        </figure>
+                        <b>Chandrayaan-2 Large Area Soft X-ray Spectrometer (CLASS)</b>
+                        is an X ray fluorescence (XRF) experiment on board Chandrayaan-2 Orbiter to map the elemental abundances of the major rock forming elements on the lunar surface. The operating energy range 0.8 keV to 15 keV covers the XRF lines from Mg, Al, Si, Ca, Ti and Fe as well as Na, Cr etc which may be detected. The spatial resolution is 12.5 km x 12.5 km from a 100 km orbit. In order to convert the XRF line flux to abundances, the incident solar spectrum is measured simultaneously with the X ray Solar Monitor (XSM) payload onboard Chandrayaan-2 Orbiter."
+                    </p>
+                    <br />
+                    <p style="/*! clear: right; */">
+                        <figure class="imgLeft">
+                            <img src="images/payloads/XSM.JPG" alt="XSM payload image" class="fullMaxWidth" />
+                            <figcaption>XSM</figcaption>
+                        </figure>
+                        <b>Solar X-ray Monitor (abbreviated as XSM)</b> 
+                        is a scientific instrument  on-board the orbiter of Chandrayaan-2 mission. XSM, along with another instrument CLASS, comprise a scientific experiment known as remote X-ray fluorescence spectroscopy.  It provides the measurement of soft X-ray spectrum from Sun, which is used for the quantitative analysis of the Lunar X-ray fluorescence measurements by CLASS to obtain estimate of the elemental composition of Lunar surface on global scale. XSM  instrument employs Silicon Drift Detector (SDD) to cover the X-ray energy range of 1-15 keV with a spectral resolution of better than 180 eV at 5.9 keV. XSM also incorporates an innovative moving mechanism in order to cover the wide range of intensities of X-rays during large solar flares. Apart from providing support to CLASS experiment, the high cadence X-ray spectral measurements during wide range of Solar flare classes will be useful in improving our understanding of the Solar corona.
+                    </p>
+                    <br />
+                    <p>
+                        <figure class="imgRight">
+                            <img src="images/payloads/iirs.bmp" alt="IIRS payload image" class="fullMaxWidth" />
+                            <figcaption>IIRS</figcaption>
+                        </figure>
+                        <b>The Imaging Infra-red Spectrometer (IIRS)</b> 
+                        is an imaging hyperspectral instrument studying for mineralogy of lunar surface (including the hydroxyl signature). IIRS operates in the 800 - 5000 nm spectral range with about 256 contiguous bands. It has 80m ground sampling distance (GSD) and 20km swath at nadir from 100km orbit altitude. Optical design is based on the TMA as fore-optics and Offner (convex multi-blazed grating) based spectrometer. Focal plane array (FPA) is HgCdTe (MCT) based actively cooled to 90K, having 500 x 256 pixels format with 30μm pixel size.
+                    </p>
+                    <br />
+                    <p>
+                        <figure class="imgLeft">
+                            <img src="images/payloads/DFSAR_Systems.jpg" alt="DFSAR payload image" class="fullMaxWidth" />
+                            <figcaption>DFSAR</figcaption>
+                        </figure>
+                        <b>The dual frequency Synthetic Aperture Radar (DFSAR)</b> a microwave imaging instrument, is configured with L-band (1.25GHz) and S-band (2.5GHz) SAR systems with resolution capability from 2m to 75m (slant-range).
+                        It is designed to operate in fully- polarimetric and hybrid-polarimetric modes to enable unambiguous detection of water-ice on the lunar poles. 
+                        The unique combination of simultaneous L- and S-band polarimetric SAR operation is expected to provide quantitative estimation of water-ice over the lunar-poles.
+                        <br />Chandrayaan-2 Dual-Frequency SAR is bringing out lunar surface and sub-surface physical characteristics by operating in various modes, such as: 
+                        High resolution with 2m slant-range (one-order better than previously flown lunar-radars), 
+                        Full-polarimetric mode (first-ever in any planetary mission), 
+                        L-band hybrid-polarimetry (first L-band operation on the Moon).
+                    </p>
+                    <br />
+                    <p>
+                        <figure class="imgRight">
+                            <img src="images/payloads/ohrc.bmp" alt="OHRC payload image" class="fullMaxWidth" />
+                            <figcaption>OHRC</figcaption>
+                        </figure>
+                        <b>An Orbiter high resolution camera (OHRC)</b> 
+                        is a very high spatial resolution camera operating in visible panchromatic (PAN) band. OHRC’s primary goal is to image landing-site region prior to landing for characterization and finding hazard-free zones. Post landing operation of the OHRC will be for scientific studies of small-scale features on lunar surface. Ground sampling distance (GSD) and swath of OHRC (in nadir view) are 0.25m and 3km respectively, from 100 km altitude.
+                    </p>
+                    <br />
+                    <p>
+                        <figure class="imgLeft">
+                            <img src="images/payloads/tmc2.bmp" alt="TMC-2 payload image" class="fullMaxWidth" />
+                            <figcaption>TMC-2</figcaption>
+                        </figure>
+                        <b>Terrain Mapping Camera-2 (TMC-2), </b> 
+                        is a follow-on of the TMC onboard Chandrayan-1 TMC-2 payload is configured to provide panchromatic images (0.4μm to 0.85μm) in 5m spatial resolution and stereo triplets (fore, nadir and aft views) from 100 km circular orbit around moon for preparing detailed 3-D map or Digital Elevation model (DEM) of the complete lunar surface (especially the smaller objects like craters, riles, flow structures, smaller graben forms). DEM derived from TMC-2 will be used for detail morphometric analysis of lunar surface.
+                    </p>
+                    <br />
+                    <p>
+                        <figure class="imgRight">
+                            <img src="images/payloads/CHACE2FM.png" alt="CHACE-2 payload image" class="fullMaxWidth" />
+                            <figcaption>CHACE-2</figcaption>
+                        </figure>
+                        <b>CHandra’s Atmospheric Composition Explorer-2 (CHACE-2)</b>, is a quadrupole mass spectrometer based payload in the orbiter segment of the Chandrayaan 2 mission of India. The scientific objective of this instrument is to study the neutral composition of the tenuous lunar exosphere.  The CHACE-2 instrument, apart from having a quadrupole mass filter, also has a Bayard Alpert gauge to measure the total pressure. CHACE-2 derives its heritage from the MENCA payload aboard the Mars Orbiter Mission.
+                    </p>
+                    <br />
+                    <p>
+                        <figure class="imgLeft">
+                            <img src="images/payloads/dfrs.jpg" alt="DFRS payload image" class="fullMaxWidth" />
+                            <figcaption>DFRS</figcaption>
+                        </figure>
+                        <b>The Dual Frequency Radio Science (DFRS)</b> experiment aboard Chandrayaan-II uses communication channel between Orbiter and ground in Radio Occultation mode to study the temporal evolution of electron density in the Lunar ionosphere. It consists of a highly stable 20 MHz EMXO source, having a stability of the order of 10-11, which generates two coherent signals at X (8496 MHz), and S (2240 MHz) band of radio frequencies. The coherent radio signals, transmitted simultaneously from satellite, and received at ground based deep station network receivers would be used to study temporal and spatial variations in the Lunar ionosphere. the major science objectives of the experiments include, (a) to study the variations in the ionosphere/ atmosphere at Moon , (b) to explore if the Ionosphere at Moon is omnipresent or has episodic appearances and, (c) to confirm the source of the ions in the lunar ionosphere, whether dusty or molecular ions. According to the experiment, every two hours we will get one ingress and then one egress observations.
+                    </p>
+                </div>
+                </div>
+                
+                <div id="footer" align="center">
+            <div id="footer" align="center" style="margin: 50px;">
+                Copyright © 2020-2025 ISTRAC. All Rights Reserved.
+
+                <button id="myBtn" title="Go to top" onclick="goToTop()"><i class="fa fa-arrow-up"></i></button>
+            </div>
+                </div>
+                
+            </div>
+
+        </div></body>
+</html>

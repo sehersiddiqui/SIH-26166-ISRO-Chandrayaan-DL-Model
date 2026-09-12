@@ -1,0 +1,39 @@
+{
+  "benchmark_name": "Synthetic Geometric Registration Benchmark",
+  "benchmark_status": "FROZEN",
+  "evaluation_type": "controlled_synthetic",
+  "empirical_anchor_count": 400,
+  "registration_case_count": 2000,
+  "registration_case_families": [
+    "geometric_only",
+    "noise_stress",
+    "outlier_stress",
+    "overlap_stress",
+    "combined_stress"
+  ],
+  "points_per_full_case": 100,
+  "selected_ransac_threshold_px": 12.0,
+  "ransac_max_trials": 5000,
+  "ransac_confidence": 0.995,
+  "success_criteria": {
+    "inlier_rmse_max_px": 10.0,
+    "rotation_error_max_deg": 3.0,
+    "scale_error_max": 0.05,
+    "translation_error_max_px": 15.0,
+    "inlier_ratio_min": 0.5
+  },
+  "overall_metrics": {
+    "success_rate": 0.8225,
+    "successful_cases": 1645,
+    "median_inlier_rmse_px": 5.816903165404843e-06,
+    "mean_inlier_rmse_px": 1.9531080097886389,
+    "median_inlier_ratio": 0.910011134730236,
+    "mean_inlier_ratio": 0.7763850410144627,
+    "true_inlier_precision": 0.999837634109377,
+    "true_inlier_recall": 0.89727125,
+    "mean_rotation_error_deg": 0.09726338144149026,
+    "mean_scale_error": 0.001592397953215353,
+    "mean_translation_error_px": 2.0289850975846893
+  },
+  "interpretation": "The benchmark evaluates controlled synthetic 2-D geometric registration using known ground-truth similarity transformations. It tests geometric variation, localization noise, partial overlap, outlier contamination, and combined stress. The benchmark demonstrates registration robustness under controlled conditions but is not a substitute for validation on real geographically overlapping cross-modal OHRC, TMC-2, and IIRS observations."
+}

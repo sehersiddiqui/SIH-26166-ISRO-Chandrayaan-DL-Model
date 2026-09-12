@@ -1,0 +1,368 @@
+{
+  "page": {
+    "title": "Chandrayaan-II",
+    "url": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml?id=tmc2"
+  },
+  "total_request_events": 20,
+  "unique_requests": 20,
+  "pradan_requests": [
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml?id=tmc2",
+      "method": "GET",
+      "resource_type": "Document",
+      "timestamp": 267009.539534
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/theme.css.xhtml?ln=primefaces-aristo",
+      "method": "GET",
+      "resource_type": "Stylesheet",
+      "timestamp": 267009.635233
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/components.css.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Stylesheet",
+      "timestamp": 267009.635756
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/layout/layout.css.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Stylesheet",
+      "timestamp": 267009.636065
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.636485
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.636747
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/core.js.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.636987
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/components.js.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.637189
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/layout/layout.js.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.637426
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/jsf.js.xhtml?ln=javax.faces",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.637618
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/watermark/watermark.css.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Stylesheet",
+      "timestamp": 267009.637845
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/watermark/watermark.js.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.638049
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/pradanStyle.css.xhtml?ln=css",
+      "method": "GET",
+      "resource_type": "Stylesheet",
+      "timestamp": 267009.638335
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/pradan.js.xhtml?ln=scripts",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.73066
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/images/isro%20logo-1X.png",
+      "method": "GET",
+      "resource_type": "Image",
+      "timestamp": 267009.732329
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/images/ajaxloadingbar.gif?pfdrid_c=true",
+      "method": "GET",
+      "resource_type": "Image",
+      "timestamp": 267009.801642
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/images/ui-icons_616161_256x240.png.xhtml?ln=primefaces-aristo",
+      "method": "GET",
+      "resource_type": "Image",
+      "timestamp": 267009.81978
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/images/ui-icons_38667f_256x240.png.xhtml?ln=primefaces-aristo",
+      "method": "GET",
+      "resource_type": "Image",
+      "timestamp": 267009.823669
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Image",
+      "timestamp": 267009.893891
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml",
+      "method": "POST",
+      "resource_type": "XHR",
+      "timestamp": 267009.945283
+    }
+  ],
+  "table_requests": [
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml?id=tmc2",
+      "method": "GET",
+      "resource_type": "Document",
+      "timestamp": 267009.539534
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/theme.css.xhtml?ln=primefaces-aristo",
+      "method": "GET",
+      "resource_type": "Stylesheet",
+      "timestamp": 267009.635233
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/components.css.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Stylesheet",
+      "timestamp": 267009.635756
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/layout/layout.css.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Stylesheet",
+      "timestamp": 267009.636065
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.636485
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.636747
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/core.js.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.636987
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/components.js.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.637189
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/layout/layout.js.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.637426
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/jsf.js.xhtml?ln=javax.faces",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.637618
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/watermark/watermark.css.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Stylesheet",
+      "timestamp": 267009.637845
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/watermark/watermark.js.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.638049
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/pradanStyle.css.xhtml?ln=css",
+      "method": "GET",
+      "resource_type": "Stylesheet",
+      "timestamp": 267009.638335
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/pradan.js.xhtml?ln=scripts",
+      "method": "GET",
+      "resource_type": "Script",
+      "timestamp": 267009.73066
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/images/ajaxloadingbar.gif?pfdrid_c=true",
+      "method": "GET",
+      "resource_type": "Image",
+      "timestamp": 267009.801642
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/images/ui-icons_616161_256x240.png.xhtml?ln=primefaces-aristo",
+      "method": "GET",
+      "resource_type": "Image",
+      "timestamp": 267009.81978
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/images/ui-icons_38667f_256x240.png.xhtml?ln=primefaces-aristo",
+      "method": "GET",
+      "resource_type": "Image",
+      "timestamp": 267009.823669
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces&v=6.1",
+      "method": "GET",
+      "resource_type": "Image",
+      "timestamp": 267009.893891
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml",
+      "method": "POST",
+      "resource_type": "XHR",
+      "timestamp": 267009.945283
+    }
+  ],
+  "successful_pradan_responses": [
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml?id=tmc2",
+      "status": 200,
+      "mime_type": "text/html",
+      "resource_type": "Document"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/theme.css.xhtml?ln=primefaces-aristo",
+      "status": 200,
+      "mime_type": "text/css",
+      "resource_type": "Stylesheet"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/components.css.xhtml?ln=primefaces&v=6.1",
+      "status": 200,
+      "mime_type": "text/css",
+      "resource_type": "Stylesheet"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/layout/layout.css.xhtml?ln=primefaces&v=6.1",
+      "status": 200,
+      "mime_type": "text/css",
+      "resource_type": "Stylesheet"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&v=6.1",
+      "status": 200,
+      "mime_type": "text/javascript",
+      "resource_type": "Script"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&v=6.1",
+      "status": 200,
+      "mime_type": "text/javascript",
+      "resource_type": "Script"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/core.js.xhtml?ln=primefaces&v=6.1",
+      "status": 200,
+      "mime_type": "text/javascript",
+      "resource_type": "Script"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/components.js.xhtml?ln=primefaces&v=6.1",
+      "status": 200,
+      "mime_type": "text/javascript",
+      "resource_type": "Script"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/layout/layout.js.xhtml?ln=primefaces&v=6.1",
+      "status": 200,
+      "mime_type": "text/javascript",
+      "resource_type": "Script"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/jsf.js.xhtml?ln=javax.faces",
+      "status": 200,
+      "mime_type": "text/javascript",
+      "resource_type": "Script"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/watermark/watermark.css.xhtml?ln=primefaces&v=6.1",
+      "status": 200,
+      "mime_type": "text/css",
+      "resource_type": "Stylesheet"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/watermark/watermark.js.xhtml?ln=primefaces&v=6.1",
+      "status": 200,
+      "mime_type": "text/javascript",
+      "resource_type": "Script"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/pradanStyle.css.xhtml?ln=css",
+      "status": 200,
+      "mime_type": "text/css",
+      "resource_type": "Stylesheet"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/pradan.js.xhtml?ln=scripts",
+      "status": 200,
+      "mime_type": "text/javascript",
+      "resource_type": "Script"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/images/isro%20logo-1X.png",
+      "status": 200,
+      "mime_type": "image/png",
+      "resource_type": "Image"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/images/ajaxloadingbar.gif?pfdrid_c=true",
+      "status": 200,
+      "mime_type": "image/gif",
+      "resource_type": "Image"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/images/ui-icons_616161_256x240.png.xhtml?ln=primefaces-aristo",
+      "status": 200,
+      "mime_type": "image/png",
+      "resource_type": "Image"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/images/ui-icons_38667f_256x240.png.xhtml?ln=primefaces-aristo",
+      "status": 200,
+      "mime_type": "image/png",
+      "resource_type": "Image"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces&v=6.1",
+      "status": 200,
+      "mime_type": "image/gif",
+      "resource_type": "Image"
+    },
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml",
+      "status": 200,
+      "mime_type": "text/xml",
+      "resource_type": "XHR"
+    }
+  ]
+}

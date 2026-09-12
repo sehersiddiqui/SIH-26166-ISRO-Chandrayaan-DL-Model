@@ -1,0 +1,2 @@
+cases,successful,success_rate,mean_rmse,median_rmse,mean_inlier_ratio,median_inlier_ratio,mean_rotation_error_deg,mean_scale_error,mean_translation_error
+2000,998,0.499,129.14328706316647,6.617261918597696,0.7021997792714934,0.898876404494382,0.1412662881715392,0.0022534715527221774,2.883016428895483

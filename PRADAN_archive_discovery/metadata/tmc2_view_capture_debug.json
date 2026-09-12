@@ -1,0 +1,13 @@
+{
+  "target_filename": "ch2_tmc_nca_20260227T1635363529_d_img_d18.zip",
+  "response_events": [
+    {
+      "url": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml",
+      "status": 200,
+      "mimeType": "text/xml",
+      "requestId": "20376.2436"
+    }
+  ],
+  "captured_body_count": 0,
+  "body_lengths": []
+}

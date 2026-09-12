@@ -1,0 +1,26 @@
+SYNTHETIC GEOMETRIC REGISTRATION BENCHMARK
+======================================================================
+
+Dataset
+Registration cases: 2000
+Selected RANSAC threshold: 12.0 px
+
+Overall performance
+Registration success rate: 0.8225
+Mean inlier-only RMSE: 1.9531 px
+Mean inlier ratio: 0.7764
+True-inlier precision: 0.9998
+True-inlier recall: 0.8973
+Mean rotation error: 0.0973 deg
+Mean scale error: 0.001592
+Mean translation error: 2.0290 px
+
+Success criteria
+Inlier RMSE <= 10.0 px
+Rotation error <= 3.0 deg
+Scale error <= 0.050
+Translation error <= 15.0 px
+Inlier ratio >= 0.50
+
+Interpretation
+This is a controlled synthetic geometric-registration benchmark using known ground-truth transformations. It demonstrates robustness of the correspondence-to-registration stage under geometric variation, localization noise, outliers, partial overlap, and combined stress. It does not constitute validation on real cross-modal OHRC/TMC-2/IIRS geographic correspondences.

@@ -1,0 +1,29 @@
+{
+  "split_strategy": "anchor_level",
+  "total_anchors": 400,
+  "train_anchors": 280,
+  "validation_anchors": 60,
+  "test_anchors": 60,
+  "number_of_scenarios": 34,
+  "train_examples": 9520,
+  "validation_examples": 2040,
+  "test_examples": 2040,
+  "train_anchor_range": [
+    0,
+    279
+  ],
+  "validation_anchor_range": [
+    280,
+    339
+  ],
+  "test_anchor_range": [
+    340,
+    399
+  ],
+  "leakage_prevention": "All synthetic scenarios generated from the same anchor are kept inside exactly one split.",
+  "scenario_coverage": "All 34 robustness scenarios occur in train, validation and test.",
+  "negative_types": [
+    "wrong_anchor",
+    "hard_negative"
+  ]
+}

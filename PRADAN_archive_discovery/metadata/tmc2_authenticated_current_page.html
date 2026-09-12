@@ -1,0 +1,351 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt2"><link type="text/css" rel="stylesheet" href="/ch2/javax.faces.resource/theme.css.xhtml?ln=primefaces-aristo"><link type="text/css" rel="stylesheet" href="/ch2/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=6.1"><link type="text/css" rel="stylesheet" href="/ch2/javax.faces.resource/layout/layout.css.xhtml?ln=primefaces&amp;v=6.1"><script type="text/javascript" src="/ch2/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=6.1"></script><script type="text/javascript" src="/ch2/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=6.1"></script><script type="text/javascript" src="/ch2/javax.faces.resource/core.js.xhtml?ln=primefaces&amp;v=6.1"></script><script type="text/javascript" src="/ch2/javax.faces.resource/components.js.xhtml?ln=primefaces&amp;v=6.1"></script><script type="text/javascript" src="/ch2/javax.faces.resource/layout/layout.js.xhtml?ln=primefaces&amp;v=6.1"></script><script type="text/javascript" src="/ch2/javax.faces.resource/jsf.js.xhtml?ln=javax.faces"></script><link type="text/css" rel="stylesheet" href="/ch2/javax.faces.resource/watermark/watermark.css.xhtml?ln=primefaces&amp;v=6.1"><script type="text/javascript" src="/ch2/javax.faces.resource/watermark/watermark.js.xhtml?ln=primefaces&amp;v=6.1"></script><link type="text/css" rel="stylesheet" href="/ch2/javax.faces.resource/pradanStyle.css.xhtml?ln=css"><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';}</script>
+        <script type="text/javascript">
+            
+            window.onload = function () {
+                fetchRecommendations();
+            }
+            
+            function showStatus() {
+            PF('statusDialog').show();
+            }
+            function hideStatus() {
+            PF('statusDialog').hide();
+            }
+            function hideAndRefresh() {
+            hideStatus();
+            pageRefresh();
+            }            
+            
+            //TODO: remove extras related to browser based bulk download and related old interface
+//            function bulkDownloadConfirmation(){
+//                var table1=document.getElementById("tableForm:selectedDocTable_data");
+//                var files1=[];
+//                var row1=table1.rows;
+//            
+//                if((row1[0].cells)[0].innerHTML === "No records found.")
+//                {
+//                    alert("No data selected. Please select the data products for download using the select tool box.");
+//                }
+//                else{
+//                    for(var i=0;i < row1.length;i++){
+//                        var cell1=row1[i].cells;
+//                        files1.push(cell1[0].innerHTML);     
+//                    }
+//                    PF('confirmDownload').show();
+//                } 
+//            }
+//         
+//         
+//            function isConfirm(answer1){
+//                if(answer1===true){
+//                   PF('confirmDownload').hide();
+//                   PF('confirmMsg').show();
+//                }
+//                else{
+//                   PF('confirmDownload').hide();
+//                }
+//            }
+//            
+//            
+//            function confirmOk(answer2){  
+//                if(answer2===true){
+//                    showStatus();
+//                    bulkDownload();
+//                    PF('confirmMsg').hide();
+//                }
+//                else{
+//                      PF('confirmMsg').hide();
+//                }
+//            }
+//            
+//           
+//            var currentIndex=0;
+//        
+//        
+//            function bulkDownload(){
+////                $('#tableForm\\:bulkDownload').hide();
+//                $('#bulkProgress').show();
+//                $('#bulkProgress_text').show();
+//                 
+//                var bulkProgress=document.getElementById("bulkProgress");
+//                var bulkProgress_text=document.getElementById("bulkProgress_text");
+//
+////                var selectIndex=document.getElementById("tableForm:startIndex").value;
+////                selectIndex=parseInt(selectIndex);
+//                var selectIndex=1;
+//
+//                var table=document.getElementById("tableForm:selectedDocTable_data");
+//                var files=[];
+//                var row=table.rows;
+//
+//                for(var i=0;i < row.length;i++){
+//                    var cell=row[i].cells;
+//                    if(cell[0].innerHTML) {
+//                        files.push(cell[0].innerHTML);     
+//                    }
+//                }
+//                
+//                if (currentIndex < files.length) {
+//                    const xhr = new XMLHttpRequest();
+//                    xhr.responseType = "blob";
+//                    xhr.onload = function() {
+//
+//                        if (this.status === 200) {
+//                            const a = document.createElement('a');
+//                            a.href = window.URL.createObjectURL(new Blob([this.response], {
+//                                type: 'application/octet-stream' }));
+//                            a.download = getFilename(files[currentIndex]);
+//                            document.body.appendChild(a);
+//                            a.click();
+//                            document.body.removeChild(a);
+//                            currentIndex++;
+//                            bulkDownload();
+//                        }
+//                        else {
+//                                if(this.status === 401){
+//                                showError("Access Denied");
+//                            }
+//                            else if(this.status === 403){
+//                                showError("Exceeded maximum number of downloads, login again to continue.");
+//    //                            const xpath=document.evaluate("/html/body/div[1]/div[2]/div[1]/div/p",document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue;
+//    //                            const xpath=document.evaluate("/html/body/div[1]/div[2]/div[1]/div/div/div/ul/li/span[1]",document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue;                
+//    //                            console.log("Xpath--"+xpath.innerHTML);
+//
+//
+//                            }
+//                            else if(this.status === 302){
+//                                showError("Session Expired, login again to continue.");
+//                            }
+//                            else{
+//                                showError("Something Went Wrong");
+//                            }
+//                            currentIndex=0;
+//                            hideStatus();
+//                        }
+//                   };
+//
+//
+//                   xhr.onprogress = function(event) {
+//
+//                    if (this.status === 200){
+//                        if (event.lengthComputable) {
+//                            
+//                            bulkProgress.max=event.total;
+//                            bulkProgress.value=event.loaded;
+//
+//                            var percent=(event.loaded/event.total)*100;
+//                            console.log("File " + (currentIndex + 1) + " Download Progress:" + percent.toFixed(2) + "%");
+//
+//                            percent=Math.floor(percent);
+//                            bulkProgress_text.innerHTML="File "+(selectIndex+currentIndex)+" ("+getFilename(files[currentIndex])+")->"+percent +"%";
+//                            
+//                            if((event.total === event.loaded) && (currentIndex === files.length-1)) {
+//                                hideStatus();
+//                                alert("Bulk Downloads Complete!");
+//                            }
+//                            
+//                            window.onload = function () {
+//                                fetchRecommendations();
+//                            }
+//                        }             
+//                    }
+//                };
+//                
+//                xhr.open('GET', files[currentIndex]);
+//                xhr.send();
+//            }
+//            else {
+//                currentIndex = 0;
+//            }
+//        }
+//        
+//        function getFilename(filepath){
+//            return filepath.split('/').pop().split('?')[0];
+//        }
+//
+//        function showError(msg){
+//            document.getElementById('errorMsg').innerHTML=msg;
+//            PF('errorMsgDialog').show();
+//        }
+        
+        </script>
+        <title>Chandrayaan-II</title></head><body>
+        <div id="page" style="min-width: 1000px;">
+
+            <div id="header"><script type="text/javascript" src="/ch2/javax.faces.resource/pradan.js.xhtml?ln=scripts"></script>
+
+            <style>
+                .ui-layout-pane
+                {
+                    z-index: 1000 !important;
+                }
+            </style>
+
+            <div id="header" style="width: 100%;">
+                <div style="background: #25283d;">
+                    <img src="/ch2/images/isro logo-1X.png" class="isroLogo">
+                    <div class="header">
+                        <h1 class="headerIsda">ISRO Science Data Archive (ISDA)</h1>
+                        <h1 class="headerMissionName">Chandrayaan-II</h1>
+                    </div>
+                </div><div id="j_idt9" style="width: 100%; height: 60px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px; margin: 0px; overflow: visible; position: relative;" class="ui-lg-12 ui-layout-container"><div id="j_idt10" class="ui-layout-unit ui-widget ui-widget-content ui-corner-all ui-layout-center ui-layout-pane ui-layout-pane-center" style="border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px; margin: 0px; position: absolute; inset: 0px 146px 0px 0px; height: 60px; width: 859px; z-index: 0; display: block; visibility: visible;"><div class="ui-layout-unit-content ui-widget-content" style="position: relative; height: 54px; visibility: visible;"><div id="j_idt11" class="ui-menu ui-menubar ui-widget ui-widget-content ui-corner-all ui-helper-clearfix navMenu" style="border-bottom: 4px solid orange !important;" role="menubar"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent " role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-text">Home</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" href="/ch2/index.xhtml"><span class="ui-menuitem-text">CH2Browse</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" href="https://pradan.issdc.gov.in"><span class="ui-menuitem-text">PRADAN</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" rel="noopener noreferrer" href="https://www.issdc.gov.in/isda.html" target="_blank"><span class="ui-menuitem-text">ISDA</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" rel="noopener noreferrer" href="https://www.issdc.gov.in" target="_blank"><span class="ui-menuitem-text">ISSDC</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" rel="noopener noreferrer" href="https://www.istrac.gov.in" target="_blank"><span class="ui-menuitem-text">ISTRAC</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" rel="noopener noreferrer" href="https://www.isro.gov.in" target="_blank"><span class="ui-menuitem-text">ISRO</span></a></li></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenuHighlight" href="/ch2/protected/payload.xhtml"><span class="ui-menuitem-text">Browse and Download</span></a></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent " role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-text">My Data Downloads</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" href="/ch2/protected/history.xhtml"><span class="ui-menuitem-text">History</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" href="/ch2/protected/statistics.xhtml"><span class="ui-menuitem-text">Statistics</span></a></li></ul></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/ch2/protected/miscDownloads.xhtml"><span class="ui-menuitem-text">Other Downloads</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/ch2/faq.xhtml"><span class="ui-menuitem-text">FAQ</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/ch2/ack.xhtml"><span class="ui-menuitem-text">Acknowledgement</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/ch2/disclaimer.xhtml"><span class="ui-menuitem-text">Disclaimer</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/ch2/contacts.xhtml"><span class="ui-menuitem-text">Contacts</span></a></li></ul></div></div></div><div id="idpMenu" class="ui-layout-unit ui-widget ui-widget-content ui-corner-all ui-layout-east navLogin ui-layout-pane ui-layout-pane-east" style="position: absolute; margin: 0px; inset: 0px 0px 0px auto; height: 60px; z-index: 0; width: 140px; display: block; visibility: visible;"><div class="ui-layout-unit-content ui-widget-content" style="position: relative; height: 54px; visibility: visible;"><div id="j_idt30" class="ui-menu ui-menubar ui-widget ui-widget-content ui-corner-all ui-helper-clearfix" style="background: orange;border: none" role="menubar"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-text">seher</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" rel="noopener noreferrer" href="https://idp.issdc.gov.in/auth/realms/issdc/account" target="_blank"><span class="ui-menuitem-text">My Account</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all headerMenu" href="https://idp.issdc.gov.in/auth/realms/issdc/protocol/openid-connect/logout?post_logout_redirect_uri=https://pradan.issdc.gov.in/ch2&amp;id_token_hint=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJwaFR0bkJuTjZ3TjRMeTI1WFRURThKZG9BNldLRDNOa3czY2VkUDRHZ3QwIn0.eyJleHAiOjE3ODg2MzUzMzAsImlhdCI6MTc4ODYzNDQzMCwiYXV0aF90aW1lIjoxNzg4NjM0NDMwLCJqdGkiOiI3ZDYyODhhOC01ZmNkLTQxZTgtOGMwMi0wODQ4YjNjMDUwZmEiLCJpc3MiOiJodHRwczovL2lkcC5pc3NkYy5nb3YuaW4vYXV0aC9yZWFsbXMvaXNzZGMiLCJhdWQiOiJQcmFkYW4iLCJzdWIiOiIyMjhkYmNlMS01OGE4LTQ1YmQtOWI5My0yNjdkZDhlMmNkOGYiLCJ0eXAiOiJJRCIsImF6cCI6IlByYWRhbiIsInNlc3Npb25fc3RhdGUiOiJkN2ZkNmI2ZC0xNDE2LTQyY2ItYjlmNC1hMzhiOWYzMjVhNjkiLCJhdF9oYXNoIjoidEo4WjFjMzRsUlBwUk90SnprcExlUSIsInNpZCI6ImQ3ZmQ2YjZkLTE0MTYtNDJjYi1iOWY0LWEzOGI5ZjMyNWE2OSIsIm5hbWUiOiJzZWhlciBzaWRkaXF1aSIsInByZWZlcnJlZF91c2VybmFtZSI6InNlaGVyMjgiLCJnaXZlbl9uYW1lIjoic2VoZXIiLCJmYW1pbHlfbmFtZSI6InNpZGRpcXVpIiwiZW1haWwiOiJzZWhlcnNpZGRpcXVpMjgxMkBnbWFpbC5jb20ifQ.SrzTCgy6QtCCWyEETpN1khVWgpmuwfjdnRLcsMC55rUw-8JYWkdWurLBWvUX7EtiKPZmp-RQHIBfxd_aC1x5JM-LoobPzlBxA89tYEZXetyf9iby-B_Kf3JB-hVTJOnVyzg2LQAzQ20PqalNu6IJvxCivEk1KQVG4S8lIiBAowY3B852qANSZA8tCY1NjMu_s94-6RSrdnkQHXgxq-yqscD5g9wEyTQsVNGF1n1ZIVFe2TvC1AsPWvNze7Q37YWHzT7u8YVPjjKhXtNg_R8aXmCmfhc7Fho8ODZh12_Sf3jJhFrezp843JkU2qm35bq_dbSnoEpv1j_SeWWGJ1NEMQ"><span class="ui-menuitem-text">Logout</span></a></li></ul></li></ul></div></div></div><div id="idpMenu-resizer" class="ui-layout-resizer ui-layout-resizer-east ui-layout-resizer-open ui-layout-resizer-east-open" style="position: absolute; padding: 0px; margin: 0px; font-size: 1px; text-align: left; overflow: hidden; z-index: 2; right: 140px; cursor: default; height: 60px; width: 6px; top: 0px;"></div></div>
+                
+                <br>
+
+            </div>
+            </div>
+
+            <div id="page-content" style="position: absolute; width: 100%; " align="center">
+                
+                <div id="content" style="min-height: 500px;">
+                <div id="content" style="width: 90%; " align="justify">
+<form id="navigatorForm" name="navigatorForm" method="post" action="/ch2/protected/browse.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="navigatorForm" value="navigatorForm">
+
+                        <br><span style="font-size: 0.8em;font-weight: bold;"><a href="/ch2/index.xhtml">CH2Browse</a>
+                            &gt;
+                            <a href="/ch2/protected/payload.xhtml">Browse And Download</a>
+                            &gt;
+                            <a href="/ch2/protected/browse.xhtml?id=tmc2">TMC-2</a></span><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="6726230977085510023:-8404505785768765266" autocomplete="off">
+</form><div id="last_release" style="display:flex; justify-content: flex-end"><label id="j_idt45" class="ui-outputlabel ui-widget">Last released: &nbsp;</label><label id="j_idt49" class="ui-outputlabel ui-widget"> Aug 21, 2026</label></div>
+                        <br><b>Here is the <a href="/ch2/protected/downloadFile/tmc2/ch2_tmc2_data_products_user_guide.pdf">TMC-2 User Guide</a> to get you started. Shape files are available <a href="/ch2/protected/miscDownloads.xhtml#tableForm:tmc2Table" target="_blank">here</a>.<br>Sample <a href="/ch2/protected/browse.xhtml?id=tmc2-5m">5m DEM</a>. Try <a href="https://chmapbrowse.issdc.gov.in" target="_blank" rel="noopener noreferrer">Chandrayaan-2 data map browse and download application</a>.</b><div id="errorMessage" class="ui-messages ui-widget" aria-live="polite"></div>
+<form id="filterForm" name="filterForm" method="post" action="/ch2/protected/browse.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="filterForm" value="filterForm">
+<span style="float: right;"><select id="filterForm:j_idt55" name="filterForm:j_idt55" size="1" onchange="mojarra.ab(this,event,'valueChange','@this','@all')">	<option value="VIEW" selected="selected">VIEW</option>
+	<option value="DOWNLOAD">DOWNLOAD</option>
+</select>&nbsp;
+                        </span>
+
+                        
+
+                        <br><input id="filterForm:j_idt60" type="submit" name="filterForm:j_idt60" value="+" class="submitButton" onclick="mojarra.ab(this,event,'action','@form','@form');return false">
+                        <br><div id="filterForm:filterTable" class="ui-datatable ui-widget"><div class="ui-datatable-tablewrapper"><table role="grid"><thead id="filterForm:filterTable_head"><tr role="row"><th id="filterForm:filterTable:j_idt62" class="ui-state-default" role="columnheader" scope="col" style="width: 200px;"><span class="ui-column-title"></span></th><th id="filterForm:filterTable:j_idt64" class="ui-state-default" role="columnheader" scope="col" style="width: 125px;"><span class="ui-column-title"></span></th><th id="filterForm:filterTable:j_idt66" class="ui-state-default" role="columnheader" scope="col"><span class="ui-column-title"></span></th><th id="filterForm:filterTable:j_idt140" class="ui-state-default" role="columnheader" scope="col" style="width: 25px;"><span class="ui-column-title"></span></th></tr></thead><tbody id="filterForm:filterTable_data" class="ui-datatable-data ui-widget-content"><tr data-ri="0" class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell" style="width: 200px;"><select id="filterForm:filterTable:0:attr" name="filterForm:filterTable:0:attr" size="1" style="width:100%" onchange="mojarra.ab(this,event,'valueChange','@this','filterForm:filterTable:0:opr filterForm:filterTable:0:operand')">	<option value="Filename;STRING;filename;false">Filename</option>
+	<option value="ObservationTime;TIME_DURATION;label.Product_Observational.Observation_Area.Time_Coordinates.start_date_time, label.Product_Observational.Observation_Area.Time_Coordinates.stop_date_time;false" selected="selected">ObservationTime</option>
+	<option value="CreationTime;TIME_DURATION;label.Product_Observational.File_Area_Observational.File.creation_date_time, label.Product_Observational.File_Area_Observational.File.creation_date_time;false">CreationTime</option>
+	<option value="ImagingOrbit;INTEGER;label.Product_Observational.Observation_Area.Mission_Area.isda:Product_Parameters.isda:imaging_orbit_number;false">ImagingOrbit</option>
+	<option value="OrbitLimbDirection;STRING;label.Product_Observational.Observation_Area.Mission_Area.isda:Product_Parameters.isda:orbit_limb_direction;false">OrbitLimbDirection</option>
+	<option value="LineExposureInMS;FLOAT;label.Product_Observational.Observation_Area.Mission_Area.isda:Product_Parameters.isda:line_exposure_duration.content;false">LineExposureInMS</option>
+	<option value="AltitudeInKM;DOUBLE;label.Product_Observational.Observation_Area.Mission_Area.isda:Product_Parameters.isda:spacecraft_altitude.content;false">AltitudeInKM</option>
+	<option value="CorrectedCoordinates;LOCATION_QUAD;label.Product_Observational.Observation_Area.Mission_Area.isda:Geometry_Parameters.isda:Corrected_Corner_Coordinates_onlyForPradan;false">CorrectedCoordinates</option>
+</select></td><td role="gridcell" style="width: 125px;"><select id="filterForm:filterTable:0:opr" name="filterForm:filterTable:0:opr" size="1" style="width:100%" onchange="mojarra.ab(this,event,'valueChange','@this','filterForm:filterTable:0:operand')">	<option value="TIME_DURATION,TimeDurationIn" selected="selected">In</option>
+	<option value="TIME_DURATION,TimeDurationBefore">Before</option>
+	<option value="TIME_DURATION,TimeDurationAfter">After</option>
+</select></td><td role="gridcell"><span id="filterForm:filterTable:0:operand">From &nbsp;
+                                        <span id="filterForm:filterTable:0:datetime1" class="ui-calendar" style=""><input id="filterForm:filterTable:0:datetime1_input" name="filterForm:filterTable:0:datetime1_input" type="text" class="ui-inputfield ui-widget ui-state-default ui-corner-all hasDatepicker" role="textbox" aria-disabled="false" aria-readonly="false"></span>
+                                        &nbsp; &nbsp; To &nbsp;
+                                        <span id="filterForm:filterTable:0:datetime2" class="ui-calendar" style=""><input id="filterForm:filterTable:0:datetime2_input" name="filterForm:filterTable:0:datetime2_input" type="text" class="ui-inputfield ui-widget ui-state-default ui-corner-all hasDatepicker" role="textbox" aria-disabled="false" aria-readonly="false"></span></span></td><td role="gridcell" style="width: 25px;"><input id="filterForm:filterTable:0:j_idt141" type="submit" name="filterForm:filterTable:0:j_idt141" value="-" style="background: #25283d !important;" class="submitButton" onclick="mojarra.ab(this,event,'action','@form','@form');return false"></td></tr></tbody></table></div></div><input id="filterForm:filterButton" type="submit" name="filterForm:filterButton" value="Filter" class="submitButton" onclick="PrimeFaces.monitorDownload(showStatus, hideAndRefresh);">
+                        &nbsp;&nbsp;<a href="/ch2/protected/browse.xhtml?id=tmc2">Clear</a>
+                        
+                        <br>
+                        <br><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:1" value="6726230977085510023:-8404505785768765266" autocomplete="off">
+</form>
+<form id="tableForm" name="tableForm" method="post" action="/ch2/protected/browse.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="tableForm" value="tableForm">
+<button id="tableForm:j_idt146" name="tableForm:j_idt146" class=" submitButton" onclick="PrimeFaces.bcn(this,event,[function(event){PF('colSelector').show()},function(event){PrimeFaces.ab({s:&quot;tableForm:j_idt146&quot;,u:&quot;tableForm:colSelectList&quot;});return false;}]);" title="Columns" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Columns</span></button><div id="tableForm:lazyDocTable" class="ui-datatable ui-widget ui-datatable-resizable" style="color:black;"><div class="ui-datatable-header ui-widget-header ui-corner-top">
+                                Data Products
+                                
+                            </div><div class="ui-datatable-tablewrapper"><table role="grid" style="table-layout:auto;"><thead id="tableForm:lazyDocTable_head"><tr role="row"><th id="tableForm:lazyDocTable:j_idt148" class="ui-state-default ui-resizable-column" role="columnheader" aria-label="#" scope="col" style="width: 17.4px; text-align: center;"><span class="ui-column-resizer ui-draggable ui-draggable-handle">&nbsp;</span><span class="ui-column-title"><span style="font-weight: bold;font-size: 1.5em;">#</span></span></th><th id="tableForm:lazyDocTable:filename" class="ui-state-default ui-resizable-column state_hover" role="columnheader" scope="col" style="width: 386.4px;"><span class="ui-column-resizer ui-draggable ui-draggable-handle">&nbsp;</span><span class="ui-column-title">
+                                        Filename
+                                    </span></th><th id="tableForm:lazyDocTable:label_-_Product_Observational_-_Observation_Area_-_Time_Coordinates_-_start_date_time" class="ui-state-default ui-sortable-column ui-resizable-column state_hover" role="columnheader" scope="col" tabindex="0" aria-label=": activate to sort column ascending" aria-sort="other" style="width: 194.4px;"><span class="ui-column-resizer ui-draggable ui-draggable-handle">&nbsp;</span><span class="ui-column-title">
+                                        StartTime
+                                    </span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th><th id="tableForm:lazyDocTable:label_-_Product_Observational_-_Observation_Area_-_Time_Coordinates_-_stop_date_time" class="ui-state-default ui-sortable-column ui-resizable-column state_hover" role="columnheader" scope="col" tabindex="0" aria-label=": activate to sort column ascending" style="width: 194.4px;"><span class="ui-column-resizer ui-draggable ui-draggable-handle">&nbsp;</span><span class="ui-column-title">
+                                        EndTime
+                                    </span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th><th id="tableForm:lazyDocTable:label_-_Product_Observational_-_File_Area_Observational_-_File_-_file_size_-_content" class="ui-state-default ui-resizable-column state_hover" role="columnheader" scope="col" style="width: 138.4px;"><span class="ui-column-resizer ui-draggable ui-draggable-handle">&nbsp;</span><span class="ui-column-title">
+                                        ProductSizeInBytes
+                                    </span></th><th id="tableForm:lazyDocTable:label_-_Product_Observational_-_Observation_Area_-_Mission_Area_-_isda-_-Product_Parameters_-_isda-_-spacecraft_altitude_-_content" class="ui-state-default ui-resizable-column state_hover" role="columnheader" scope="col" style="width: 90.4px;"><span class="ui-column-resizer ui-draggable ui-draggable-handle">&nbsp;</span><span class="ui-column-title">
+                                        AltitudeInKM
+                                    </span></th><th id="tableForm:lazyDocTable:j_idt171" class="ui-state-default ui-resizable-column" role="columnheader" aria-label="Info" scope="col" style="width: 39.4px; text-align: center;"><span class="ui-column-resizer ui-draggable ui-draggable-handle" style="display: none;">&nbsp;</span><span class="ui-column-title"><span class="tableHeader" style="overflow: visible;">Info</span></span></th></tr></thead><tbody id="tableForm:lazyDocTable_data" class="ui-datatable-data ui-widget-content"><tr data-ri="0" class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell" style="width: 16px;text-align: center;">1</td><td role="gridcell" class="state_hover">
+                                        <a style="color: #00F;" target="_blank" href="/ch2/protected/downloadData/POST_OD/isda_archive/ch2_bundle/cho_bundle/nop/tmc_collection/data/calibrated/20260813/ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip?tmc2">
+                                            ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip
+                                        </a></td><td role="gridcell" class="state_hover">2026-08-13T06:27:37.855Z</td><td role="gridcell" class="state_hover">2026-08-13T06:35:37.133Z</td><td role="gridcell" class="state_hover">1184864000</td><td role="gridcell" class="state_hover">109.5</td><td role="gridcell" style="width:40px;text-align: center"><button id="tableForm:lazyDocTable:0:j_idt173" name="tableForm:lazyDocTable:0:j_idt173" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;tableForm:lazyDocTable:0:j_idt173&quot;,u:&quot;tableForm:docDetail&quot;,onco:function(xhr,status,args){PF('docDialog').show();}});return false;" title="View" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View</span></button></td></tr><tr data-ri="1" class="ui-widget-content ui-datatable-odd" role="row"><td role="gridcell" style="width: 16px;text-align: center;">2</td><td role="gridcell" class="state_hover">
+                                        <a style="color: #00F;" target="_blank" href="/ch2/protected/downloadData/POST_OD/isda_archive/ch2_bundle/cho_bundle/nop/tmc_collection/data/calibrated/20260813/ch2_tmc_nca_20260813T0627378526_d_img_d18.zip?tmc2">
+                                            ch2_tmc_nca_20260813T0627378526_d_img_d18.zip
+                                        </a></td><td role="gridcell" class="state_hover">2026-08-13T06:27:37.852Z</td><td role="gridcell" class="state_hover">2026-08-13T06:35:37.136Z</td><td role="gridcell" class="state_hover">1184880000</td><td role="gridcell" class="state_hover">109.5</td><td role="gridcell" style="width:40px;text-align: center"><button id="tableForm:lazyDocTable:1:j_idt173" name="tableForm:lazyDocTable:1:j_idt173" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;tableForm:lazyDocTable:1:j_idt173&quot;,u:&quot;tableForm:docDetail&quot;,onco:function(xhr,status,args){PF('docDialog').show();}});return false;" title="View" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View</span></button></td></tr><tr data-ri="2" class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell" style="width: 16px;text-align: center;">3</td><td role="gridcell" class="state_hover">
+                                        <a style="color: #00F;" target="_blank" href="/ch2/protected/downloadData/POST_OD/isda_archive/ch2_bundle/cho_bundle/nop/tmc_collection/data/calibrated/20260813/ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip?tmc2">
+                                            ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip
+                                        </a></td><td role="gridcell" class="state_hover">2026-08-13T06:27:37.855Z</td><td role="gridcell" class="state_hover">2026-08-13T06:35:37.139Z</td><td role="gridcell" class="state_hover">1184880000</td><td role="gridcell" class="state_hover">109.5</td><td role="gridcell" style="width:40px;text-align: center"><button id="tableForm:lazyDocTable:2:j_idt173" name="tableForm:lazyDocTable:2:j_idt173" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;tableForm:lazyDocTable:2:j_idt173&quot;,u:&quot;tableForm:docDetail&quot;,onco:function(xhr,status,args){PF('docDialog').show();}});return false;" title="View" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View</span></button></td></tr><tr data-ri="3" class="ui-widget-content ui-datatable-odd" role="row"><td role="gridcell" style="width: 16px;text-align: center;">4</td><td role="gridcell" class="state_hover">
+                                        <a style="color: #00F;" target="_blank" href="/ch2/protected/downloadData/POST_OD/isda_archive/ch2_bundle/cho_bundle/nop/tmc_collection/data/raw/20260813/ch2_tmc_nrn_20260813T0627378557_d_img_d18.zip?tmc2">
+                                            ch2_tmc_nrn_20260813T0627378557_d_img_d18.zip
+                                        </a></td><td role="gridcell" class="state_hover">2026-08-13T06:27:37.855Z</td><td role="gridcell" class="state_hover">2026-08-13T06:35:37.133Z</td><td role="gridcell" class="state_hover">1184856000</td><td role="gridcell" class="state_hover">109.5</td><td role="gridcell" style="width:40px;text-align: center"><button id="tableForm:lazyDocTable:3:j_idt173" name="tableForm:lazyDocTable:3:j_idt173" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;tableForm:lazyDocTable:3:j_idt173&quot;,u:&quot;tableForm:docDetail&quot;,onco:function(xhr,status,args){PF('docDialog').show();}});return false;" title="View" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View</span></button></td></tr><tr data-ri="4" class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell" style="width: 16px;text-align: center;">5</td><td role="gridcell" class="state_hover">
+                                        <a style="color: #00F;" target="_blank" href="/ch2/protected/downloadData/POST_OD/isda_archive/ch2_bundle/cho_bundle/nop/tmc_collection/data/raw/20260813/ch2_tmc_nra_20260813T0627378526_d_img_d18.zip?tmc2">
+                                            ch2_tmc_nra_20260813T0627378526_d_img_d18.zip
+                                        </a></td><td role="gridcell" class="state_hover">2026-08-13T06:27:37.852Z</td><td role="gridcell" class="state_hover">2026-08-13T06:35:37.136Z</td><td role="gridcell" class="state_hover">1184880000</td><td role="gridcell" class="state_hover">109.5</td><td role="gridcell" style="width:40px;text-align: center"><button id="tableForm:lazyDocTable:4:j_idt173" name="tableForm:lazyDocTable:4:j_idt173" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;tableForm:lazyDocTable:4:j_idt173&quot;,u:&quot;tableForm:docDetail&quot;,onco:function(xhr,status,args){PF('docDialog').show();}});return false;" title="View" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View</span></button></td></tr><tr data-ri="5" class="ui-widget-content ui-datatable-odd" role="row"><td role="gridcell" style="width: 16px;text-align: center;">6</td><td role="gridcell" class="state_hover">
+                                        <a style="color: #00F;" target="_blank" href="/ch2/protected/downloadData/POST_OD/isda_archive/ch2_bundle/cho_bundle/nop/tmc_collection/data/raw/20260813/ch2_tmc_nrf_20260813T0627378557_d_img_d18.zip?tmc2">
+                                            ch2_tmc_nrf_20260813T0627378557_d_img_d18.zip
+                                        </a></td><td role="gridcell" class="state_hover">2026-08-13T06:27:37.855Z</td><td role="gridcell" class="state_hover">2026-08-13T06:35:37.139Z</td><td role="gridcell" class="state_hover">1184872000</td><td role="gridcell" class="state_hover">109.5</td><td role="gridcell" style="width:40px;text-align: center"><button id="tableForm:lazyDocTable:5:j_idt173" name="tableForm:lazyDocTable:5:j_idt173" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;tableForm:lazyDocTable:5:j_idt173&quot;,u:&quot;tableForm:docDetail&quot;,onco:function(xhr,status,args){PF('docDialog').show();}});return false;" title="View" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View</span></button></td></tr><tr data-ri="6" class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell" style="width: 16px;text-align: center;">7</td><td role="gridcell" class="state_hover">
+                                        <a style="color: #00F;" target="_blank" href="/ch2/protected/downloadData/POST_OD/isda_archive/ch2_bundle/cho_bundle/nop/tmc_collection/data/calibrated/20260813/ch2_tmc_ncn_20260813T1023298745_d_img_d18.zip?tmc2">
+                                            ch2_tmc_ncn_20260813T1023298745_d_img_d18.zip
+                                        </a></td><td role="gridcell" class="state_hover">2026-08-13T10:23:29.874Z</td><td role="gridcell" class="state_hover">2026-08-13T10:31:27.964Z</td><td role="gridcell" class="state_hover">1181928000</td><td role="gridcell" class="state_hover">109.54</td><td role="gridcell" style="width:40px;text-align: center"><button id="tableForm:lazyDocTable:6:j_idt173" name="tableForm:lazyDocTable:6:j_idt173" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;tableForm:lazyDocTable:6:j_idt173&quot;,u:&quot;tableForm:docDetail&quot;,onco:function(xhr,status,args){PF('docDialog').show();}});return false;" title="View" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View</span></button></td></tr><tr data-ri="7" class="ui-widget-content ui-datatable-odd" role="row"><td role="gridcell" style="width: 16px;text-align: center;">8</td><td role="gridcell" class="state_hover">
+                                        <a style="color: #00F;" target="_blank" href="/ch2/protected/downloadData/POST_OD/isda_archive/ch2_bundle/cho_bundle/nop/tmc_collection/data/calibrated/20260813/ch2_tmc_nca_20260813T1023298778_d_img_d18.zip?tmc2">
+                                            ch2_tmc_nca_20260813T1023298778_d_img_d18.zip
+                                        </a></td><td role="gridcell" class="state_hover">2026-08-13T10:23:29.877Z</td><td role="gridcell" class="state_hover">2026-08-13T10:31:27.964Z</td><td role="gridcell" class="state_hover">1181920000</td><td role="gridcell" class="state_hover">109.54</td><td role="gridcell" style="width:40px;text-align: center"><button id="tableForm:lazyDocTable:7:j_idt173" name="tableForm:lazyDocTable:7:j_idt173" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;tableForm:lazyDocTable:7:j_idt173&quot;,u:&quot;tableForm:docDetail&quot;,onco:function(xhr,status,args){PF('docDialog').show();}});return false;" title="View" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View</span></button></td></tr><tr data-ri="8" class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell" style="width: 16px;text-align: center;">9</td><td role="gridcell" class="state_hover">
+                                        <a style="color: #00F;" target="_blank" href="/ch2/protected/downloadData/POST_OD/isda_archive/ch2_bundle/cho_bundle/nop/tmc_collection/data/calibrated/20260813/ch2_tmc_ncf_20260813T1023298778_d_img_d18.zip?tmc2">
+                                            ch2_tmc_ncf_20260813T1023298778_d_img_d18.zip
+                                        </a></td><td role="gridcell" class="state_hover">2026-08-13T10:23:29.877Z</td><td role="gridcell" class="state_hover">2026-08-13T10:31:27.964Z</td><td role="gridcell" class="state_hover">1181920000</td><td role="gridcell" class="state_hover">109.54</td><td role="gridcell" style="width:40px;text-align: center"><button id="tableForm:lazyDocTable:8:j_idt173" name="tableForm:lazyDocTable:8:j_idt173" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;tableForm:lazyDocTable:8:j_idt173&quot;,u:&quot;tableForm:docDetail&quot;,onco:function(xhr,status,args){PF('docDialog').show();}});return false;" title="View" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View</span></button></td></tr><tr data-ri="9" class="ui-widget-content ui-datatable-odd" role="row"><td role="gridcell" style="width: 16px;text-align: center;">10</td><td role="gridcell" class="state_hover">
+                                        <a style="color: #00F;" target="_blank" href="/ch2/protected/downloadData/POST_OD/isda_archive/ch2_bundle/cho_bundle/nop/tmc_collection/data/raw/20260813/ch2_tmc_nrn_20260813T1023298745_d_img_d18.zip?tmc2">
+                                            ch2_tmc_nrn_20260813T1023298745_d_img_d18.zip
+                                        </a></td><td role="gridcell" class="state_hover">2026-08-13T10:23:29.874Z</td><td role="gridcell" class="state_hover">2026-08-13T10:31:27.964Z</td><td role="gridcell" class="state_hover">1181920000</td><td role="gridcell" class="state_hover">109.54</td><td role="gridcell" style="width:40px;text-align: center"><button id="tableForm:lazyDocTable:9:j_idt173" name="tableForm:lazyDocTable:9:j_idt173" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;tableForm:lazyDocTable:9:j_idt173&quot;,u:&quot;tableForm:docDetail&quot;,onco:function(xhr,status,args){PF('docDialog').show();}});return false;" title="View" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View</span></button></td></tr></tbody></table></div><div id="tableForm:lazyDocTable_paginator_bottom" class="ui-paginator ui-paginator-bottom ui-widget-header ui-corner-bottom" role="navigation" aria-label="Pagination"><a href="#" class="ui-paginator-first ui-state-default ui-corner-all ui-state-disabled" aria-label="First Page" tabindex="-1"><span class="ui-icon ui-icon-seek-first">F</span></a><a href="#" class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled" aria-label="Previous Page" tabindex="-1"><span class="ui-icon ui-icon-seek-prev">P</span></a>                                     <span class="ui-paginator-current">Page 1</span><a href="#" class="ui-paginator-next ui-state-default ui-corner-all" aria-label="Next Page" tabindex="0"><span class="ui-icon ui-icon-seek-next">N</span></a>                                     &nbsp;&nbsp;&nbsp;&nbsp;Showing <label id="tableForm:lazyDocTable_rppLabel" for="tableForm:lazyDocTable:j_id2" class="ui-paginator-rpp-label ui-helper-hidden">Rows Per Page</label><select id="tableForm:lazyDocTable:j_id2" name="tableForm:lazyDocTable_rppDD" aria-labelledby="tableForm:lazyDocTable_rppLabel" class="ui-paginator-rpp-options ui-widget ui-state-default ui-corner-left" value="10" autocomplete="off"><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option><option value="75">75</option><option value="100">100</option></select>rows </div><div class="ui-column-resizer-helper ui-state-highlight"></div></div><span id="tableForm:row-count"> 
+                            Total Rows: 
+                            28508<button id="tableForm:j_idt180" name="tableForm:j_idt180" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;tableForm:j_idt180&quot;,u:&quot;tableForm:row-count&quot;});return false;" title="Refresh" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-refresh"></span><span class="ui-button-text ui-c">Refresh</span></button></span>
+                        <br>
+
+
+                        <div class="ui-g">
+                                <div class="ui-lg-7 ui-md-12 ui-sm-12" style=" margin-bottom: 10px;"><div id="tableForm:skipToFilePanel" class="ui-lg-8" style="background-color: lightgoldenrodyellow; padding: 5px;">
+                                        Jump to file <input type="text" name="tableForm:j_idt183" placeholder="Filename"><button id="tableForm:j_idt184" name="tableForm:j_idt184" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.bcn(this,event,[function(event){PrimeFaces.monitorDownload(showStatus, hideAndRefresh);},function(event){PrimeFaces.ab({s:&quot;tableForm:j_idt184&quot;,p:&quot;tableForm:skipToFilePanel&quot;,u:&quot;@all&quot;});return false;}]);" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Submit</span></button>
+
+                                        <br>
+                                        <span style="font-size: 0.9rem;"> (Use this when downloading a large number of files to jump directly to the file you downloaded last, making it easier to select the next files you need. For more details refer FAQs section.) </span><div id="tableForm:jumpToFileMsg" class="ui-messages ui-widget" aria-live="polite"></div></div>
+                                </div><div class="ui-lg-4 ui-md-12 ui-sm-12"><span style="display: flex;justify-content: end;"><button id="tableForm:j_idt189" name="tableForm:j_idt189" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only submitButton preserveSpace" onclick="PrimeFaces.bcn(this,event,[function(event){PF('downloadSelector').show()},function(event){PrimeFaces.ab({s:&quot;tableForm:j_idt189&quot;,u:&quot;tableForm:downloadSelect&quot;});return false;}]);" style="background: #25283d !important;color: white !important;font-weight: normal !important;transition: all ease-in-out 400ms;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Select and Download in Bulk with Script</span></button></span></div>
+                        </div>
+                        
+
+
+
+
+
+                        <br><div id="tableForm:j_idt192"></div><div id="tableForm:j_idt193" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container ui-resizable" role="dialog" aria-labelledby="tableForm:j_idt193_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"><span id="tableForm:j_idt193_title" class="ui-dialog-title">Please wait...</span></div><div class="ui-dialog-content ui-widget-content" style="height: auto;"><img id="tableForm:j_idt194" src="/ch2/images/ajaxloadingbar.gif?pfdrid_c=true" alt="Loading..."></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div></div><div id="tableForm:j_idt196" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container ui-draggable" role="dialog" aria-labelledby="tableForm:j_idt196_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"><span id="tableForm:j_idt196_title" class="ui-dialog-title">Data Product Meta Info</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" style="height: auto;"><div id="tableForm:docDetail" class="ui-treetable ui-widget ui-treetable-scrollable"><div class="ui-widget-header ui-treetable-scrollable-header"><div class="ui-treetable-scrollable-header-box"><table role="grid" style="width: auto;"><thead id="tableForm:docDetail_head"><tr role="row"><th id="tableForm:docDetail:j_idt197" class="ui-state-default ui-resizable-column" role="columnheader" style="min-width:100px;"><span class="ui-column-title"></span></th><th id="tableForm:docDetail:j_idt199" class="ui-state-default ui-resizable-column" role="columnheader" style="min-width:100px;"><span class="ui-column-title"></span></th></tr></thead></table></div></div><div class="ui-treetable-scrollable-body" style="height:700px"><table role="grid" style="width: auto;"><tbody id="tableForm:docDetail_data" class="ui-treetable-data ui-widget-content"><tr class="ui-widget-content ui-treetable-empty-message"><td colspan="2">No records found.</td></tr></tbody></table></div><div class="ui-widget-header ui-treetable-scrollable-footer"><div class="ui-treetable-scrollable-footer-box"><table role="grid" style="width: auto;"><tfoot></tfoot></table></div></div><input id="tableForm:docDetail_scrollState" name="tableForm:docDetail_scrollState" type="hidden" value="0,0"></div></div></div><div id="tableForm:j_idt201" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container ui-draggable" role="dialog" aria-labelledby="tableForm:j_idt201_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"><span id="tableForm:j_idt201_title" class="ui-dialog-title">Column Selector</span></div><div class="ui-dialog-content ui-widget-content" style="height: auto;"><div id="tableForm:colSelectList" class="ui-picklist ui-widget ui-helper-clearfix"><div class="ui-picklist-list-wrapper"><ul class="ui-widget-content ui-picklist-list ui-picklist-source ui-corner-all ui-sortable" role="menu" tabindex="0"><li class="ui-picklist-item ui-corner-all ui-sortable-handle" data-item-value="ProductMD5Sum;STRING;label.Product_Observational.File_Area_Observational.File.md5_checksum;false" data-item-label="ProductMD5Sum" role="menuitem">ProductMD5Sum</li><li class="ui-picklist-item ui-corner-all ui-sortable-handle" data-item-value="CreationTime;TIME;label.Product_Observational.File_Area_Observational.File.creation_date_time;false" data-item-label="CreationTime" role="menuitem">CreationTime</li><li class="ui-picklist-item ui-corner-all ui-sortable-handle" data-item-value="ImagingOrbit;INTEGER;label.Product_Observational.Observation_Area.Mission_Area.isda:Product_Parameters.isda:imaging_orbit_number;false" data-item-label="ImagingOrbit" role="menuitem">ImagingOrbit</li><li class="ui-picklist-item ui-corner-all ui-sortable-handle" data-item-value="LineExposureInMS;FLOAT;label.Product_Observational.Observation_Area.Mission_Area.isda:Product_Parameters.isda:line_exposure_duration.content;false" data-item-label="LineExposureInMS" role="menuitem">LineExposureInMS</li><li class="ui-picklist-item ui-corner-all ui-sortable-handle" data-item-value="OrbitLimbDirection;STRING;label.Product_Observational.Observation_Area.Mission_Area.isda:Product_Parameters.isda:orbit_limb_direction;false" data-item-label="OrbitLimbDirection" role="menuitem">OrbitLimbDirection</li></ul><select id="tableForm:colSelectList_source" name="tableForm:colSelectList_source" multiple="true" class="ui-helper-hidden"><option selected="selected" value="ProductMD5Sum;STRING;label.Product_Observational.File_Area_Observational.File.md5_checksum;false">ProductMD5Sum</option><option selected="selected" value="CreationTime;TIME;label.Product_Observational.File_Area_Observational.File.creation_date_time;false">CreationTime</option><option selected="selected" value="ImagingOrbit;INTEGER;label.Product_Observational.Observation_Area.Mission_Area.isda:Product_Parameters.isda:imaging_orbit_number;false">ImagingOrbit</option><option selected="selected" value="LineExposureInMS;FLOAT;label.Product_Observational.Observation_Area.Mission_Area.isda:Product_Parameters.isda:line_exposure_duration.content;false">LineExposureInMS</option><option selected="selected" value="OrbitLimbDirection;STRING;label.Product_Observational.Observation_Area.Mission_Area.isda:Product_Parameters.isda:orbit_limb_direction;false">OrbitLimbDirection</option></select></div><div class="ui-picklist-buttons"><div class="ui-picklist-buttons-cell"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-add" title="Add" tabindex="0" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrow-1-e"></span><span class="ui-button-text ui-c">Add</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-add-all" title="Add All" tabindex="0" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrowstop-1-e"></span><span class="ui-button-text ui-c">Add All</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-remove" title="Remove" tabindex="0" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrow-1-w"></span><span class="ui-button-text ui-c">Remove</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-picklist-button-remove-all" title="Remove All" tabindex="0" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon ui-icon-arrowstop-1-w"></span><span class="ui-button-text ui-c">Remove All</span></button></div></div><div class="ui-picklist-list-wrapper"><ul class="ui-widget-content ui-picklist-list ui-picklist-target ui-corner-all ui-sortable" role="menu" tabindex="0"><li class="ui-picklist-item ui-corner-all ui-sortable-handle" data-item-value="Filename;STRING;filename;false" data-item-label="Filename" role="menuitem">Filename</li><li class="ui-picklist-item ui-corner-all ui-sortable-handle" data-item-value="StartTime;TIME;label.Product_Observational.Observation_Area.Time_Coordinates.start_date_time;true" data-item-label="StartTime" role="menuitem">StartTime</li><li class="ui-picklist-item ui-corner-all ui-sortable-handle" data-item-value="EndTime;TIME;label.Product_Observational.Observation_Area.Time_Coordinates.stop_date_time;true" data-item-label="EndTime" role="menuitem">EndTime</li><li class="ui-picklist-item ui-corner-all ui-sortable-handle" data-item-value="ProductSizeInBytes;INTEGER;label.Product_Observational.File_Area_Observational.File.file_size.content;false" data-item-label="ProductSizeInBytes" role="menuitem">ProductSizeInBytes</li><li class="ui-picklist-item ui-corner-all ui-sortable-handle" data-item-value="AltitudeInKM;DOUBLE;label.Product_Observational.Observation_Area.Mission_Area.isda:Product_Parameters.isda:spacecraft_altitude.content;false" data-item-label="AltitudeInKM" role="menuitem">AltitudeInKM</li></ul><select id="tableForm:colSelectList_target" name="tableForm:colSelectList_target" multiple="true" class="ui-helper-hidden"><option selected="selected" value="Filename;STRING;filename;false">Filename</option><option selected="selected" value="StartTime;TIME;label.Product_Observational.Observation_Area.Time_Coordinates.start_date_time;true">StartTime</option><option selected="selected" value="EndTime;TIME;label.Product_Observational.Observation_Area.Time_Coordinates.stop_date_time;true">EndTime</option><option selected="selected" value="ProductSizeInBytes;INTEGER;label.Product_Observational.File_Area_Observational.File.file_size.content;false">ProductSizeInBytes</option><option selected="selected" value="AltitudeInKM;DOUBLE;label.Product_Observational.Observation_Area.Mission_Area.isda:Product_Parameters.isda:spacecraft_altitude.content;false">AltitudeInKM</option></select></div><div id="tableForm:colSelectList_ariaRegion" class="ui-helper-hidden-accessible" role="region" aria-live="polite" aria-atomic="true"></div></div><button id="tableForm:j_idt202" name="tableForm:j_idt202" class=" submitButton" onclick="PrimeFaces.bcn(this,event,[function(event){PF('colSelector').hide()},function(event){PrimeFaces.ab({s:&quot;tableForm:j_idt202&quot;,p:&quot;tableForm:colSelectList&quot;,u:&quot;tableForm:lazyDocTable&quot;});return false;}]);" title="Submit" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Submit</span></button></div></div><div id="tableForm:j_idt203" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container ui-draggable" role="dialog" aria-labelledby="tableForm:j_idt203_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"><span id="tableForm:j_idt203_title" class="ui-dialog-title">Data Download</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" style="height: auto;"><span id="tableForm:downloadSelect" style="border-width:1px; border-style: solid;padding: 10px;display: block;">
+                                    Select 
+                                    <select id="tableForm:j_idt206" name="tableForm:j_idt206" size="1" onchange="mojarra.ab(this,event,'valueChange','@this','tableForm:selectSize')">	<option value="length" selected="selected">number of files</option>
+	<option value="volume" disabled="disabled">size (in MB)</option>
+</select><span id="tableForm:selectSize"><input type="text" name="tableForm:j_idt209" value="10" size="6"></span>
+                                    from table index #
+                                    <input id="tableForm:startIndex-z" type="text" name="tableForm:startIndex-z" value="1" size="5" style="">
+                                <br><div id="tableForm:downloadMsg" class="ui-messages ui-widget" aria-live="polite"></div></span></div></div><div id="tableForm:j_idt218" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container ui-draggable ui-resizable" role="dialog" aria-labelledby="tableForm:j_idt218_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"><span id="tableForm:j_idt218_title" class="ui-dialog-title">Preview</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" style="height: auto;"><img id="tableForm:imgPreview" src="" alt="" class="largerPreview"></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div></div>
+                            
+                            <br>Please refer <a href="/ch2/protected/miscDownloads.xhtml#tableForm:tmc2Table" target="_blank">OtherDownloads</a> section for accompanying downloadables.
+
+                        <br>
+                        <br>
+                        <br>
+                        <br><script id="tableForm:j_idt223" type="text/javascript">fetchRecommendations = function() {PrimeFaces.ab({s:"tableForm:j_idt223",f:"tableForm",p:"tableForm:j_idt223",u:"tableForm:recommendationsTable",g:false,pa:arguments[0]});}</script><span id="tableForm:recommendationsTable"><span style="font-size: 1.1em;font-weight: bold;">You may be interested in:</span><div id="tableForm:j_idt225" class="ui-datatable ui-widget ui-datatable-resizable" style="color:black;"><div class="ui-datatable-tablewrapper"><table role="grid" style="table-layout:auto;"><thead id="tableForm:j_idt225_head"><tr role="row"><th id="tableForm:j_idt225:filename" class="ui-state-default ui-resizable-column state_hover" role="columnheader" scope="col" style="width: 383.4px;"><span class="ui-column-resizer ui-draggable ui-draggable-handle">&nbsp;</span><span class="ui-column-title">
+                                            Filename
+                                        </span></th><th id="tableForm:j_idt225:label_-_Product_Observational_-_Observation_Area_-_Time_Coordinates_-_start_date_time" class="ui-state-default ui-sortable-column ui-resizable-column state_hover" role="columnheader" scope="col" tabindex="0" aria-label=": activate to sort column ascending" aria-sort="other" style="width: 194.4px;"><span class="ui-column-resizer ui-draggable ui-draggable-handle">&nbsp;</span><span class="ui-column-title">
+                                            StartTime
+                                        </span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th><th id="tableForm:j_idt225:label_-_Product_Observational_-_Observation_Area_-_Time_Coordinates_-_stop_date_time" class="ui-state-default ui-sortable-column ui-resizable-column state_hover" role="columnheader" scope="col" tabindex="0" aria-label=": activate to sort column ascending" style="width: 194.4px;"><span class="ui-column-resizer ui-draggable ui-draggable-handle">&nbsp;</span><span class="ui-column-title">
+                                            EndTime
+                                        </span><span class="ui-sortable-column-icon ui-icon ui-icon-carat-2-n-s"></span></th><th id="tableForm:j_idt225:label_-_Product_Observational_-_File_Area_Observational_-_File_-_file_size_-_content" class="ui-state-default ui-resizable-column state_hover" role="columnheader" scope="col" style="width: 138.4px;"><span class="ui-column-resizer ui-draggable ui-draggable-handle">&nbsp;</span><span class="ui-column-title">
+                                            ProductSizeInBytes
+                                        </span></th><th id="tableForm:j_idt225:label_-_Product_Observational_-_Observation_Area_-_Mission_Area_-_isda-_-Product_Parameters_-_isda-_-spacecraft_altitude_-_content" class="ui-state-default ui-resizable-column state_hover" role="columnheader" scope="col" style="width: 90.4px;"><span class="ui-column-resizer ui-draggable ui-draggable-handle">&nbsp;</span><span class="ui-column-title">
+                                            AltitudeInKM
+                                        </span></th><th id="tableForm:j_idt225:j_idt246" class="ui-state-default ui-resizable-column" role="columnheader" aria-label="Info" scope="col" style="width: 39.4px; text-align: center;"><span class="ui-column-resizer ui-draggable ui-draggable-handle" style="display: none;">&nbsp;</span><span class="ui-column-title"><span class="tableHeader" style="overflow: visible;">Info</span></span></th></tr></thead><tbody id="tableForm:j_idt225_data" class="ui-datatable-data ui-widget-content"><tr data-ri="0" class="ui-widget-content ui-datatable-even" role="row"><td role="gridcell" class="state_hover">
+                                            <a style="color: #00F;" target="_blank" href="/ch2/protected/downloadData/POST_OD/isda_archive/ch2_bundle/cho_bundle/nop/tmc_collection/data/derived/20250217/ch2_tmc_ndn_20250217T0120183473_d_oth_d18.zip?tmc2&amp;rec_req_id=4b94d9e8-48c5-40c4-a9b7-790273a22165">
+                                                ch2_tmc_ndn_20250217T0120183473_d_oth_d18.zip
+                                            </a></td><td role="gridcell" class="state_hover">2025-02-17T01:20:18.347Z</td><td role="gridcell" class="state_hover">2025-02-17T01:30:03.437Z</td><td role="gridcell" class="state_hover">2086413357</td><td role="gridcell" class="state_hover">95.85</td><td role="gridcell" style="width:40px;text-align: center"><button id="tableForm:j_idt225:0:j_idt248" name="tableForm:j_idt225:0:j_idt248" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({s:&quot;tableForm:j_idt225:0:j_idt248&quot;,u:&quot;tableForm:docDetail&quot;,onco:function(xhr,status,args){PF('docDialog').show();}});return false;" title="View" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">View</span></button></td></tr></tbody></table></div><div class="ui-column-resizer-helper ui-state-highlight"></div></div></span><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:2" value="6726230977085510023:-8404505785768765266" autocomplete="off">
+</form>
+
+                </div>
+                </div>
+                
+                <div id="footer" align="center">
+            <div id="footer" align="center" style="margin: 50px;">
+                Copyright © 2020-2025 ISTRAC. All Rights Reserved.
+
+                <button id="myBtn" title="Go to top" onclick="goToTop()"><i class="fa fa-arrow-up"></i></button>
+            </div>
+                </div>
+                
+            </div>
+
+        </div>
+<div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div><div class="ui-dialog-docking-zone"></div></body></html>

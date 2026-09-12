@@ -1,0 +1,64 @@
+{
+  "status_code": 200,
+  "final_url": "https://idp.issdc.gov.in/auth/realms/issdc/protocol/openid-connect/auth?response_type=code&client_id=Pradan&redirect_uri=https%3A%2F%2Fpradan.issdc.gov.in%2Fch2%2Fprotected%2Fpayload.xhtml&state=2bb217cf-bc31-4a45-8c87-90a9b7ca0e5f&login=true&scope=openid",
+  "content_type": "text/html;charset=utf-8",
+  "size_bytes": 4270,
+  "title": "Sign in to Indian Space Science Data Center",
+  "links": [
+    {
+      "label": "Forgot Password?",
+      "href": "/auth/realms/issdc/login-actions/reset-credentials?client_id=Pradan&tab_id=vDfhnNJXayc"
+    },
+    {
+      "label": "Register",
+      "href": "/auth/realms/issdc/login-actions/registration?client_id=Pradan&tab_id=vDfhnNJXayc"
+    }
+  ],
+  "forms": [
+    {
+      "id": "kc-form-login",
+      "name": null,
+      "method": "post",
+      "action": "https://idp.issdc.gov.in/auth/realms/issdc/login-actions/authenticate?session_code=TmFrgabxV4nr9PYaw60H5OY9xhkPSyiXuNa7auQvBl4&execution=4f75202b-ce79-477f-83e4-f05fbc4f5eb6&client_id=Pradan&tab_id=vDfhnNJXayc",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "username",
+          "id": "username",
+          "value": ""
+        },
+        {
+          "tag": "input",
+          "type": "password",
+          "name": "password",
+          "id": "password",
+          "value": null
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "credentialId",
+          "id": "id-hidden-input",
+          "value": null
+        },
+        {
+          "tag": "input",
+          "type": "submit",
+          "name": "login",
+          "id": "kc-login",
+          "value": "Sign In"
+        }
+      ]
+    }
+  ],
+  "external_scripts": [],
+  "primefaces_scripts": [],
+  "hidden_inputs": [
+    {
+      "name": "credentialId",
+      "id": "id-hidden-input",
+      "value_length": 0
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "requested_url": "https://pradan.issdc.gov.in/ch2/index.xhtml",
+  "final_url": "https://pradan.issdc.gov.in/ch2/index.xhtml",
+  "status_code": 200,
+  "content_type": "text/html;charset=UTF-8",
+  "response_bytes": 31050,
+  "page_title": "Chandrayaan-II",
+  "auth_keywords": [
+    "login",
+    "protected"
+  ],
+  "n_links": 15,
+  "n_inputs": 1,
+  "n_forms": 0,
+  "primefaces_indicators": [
+    "PrimeFaces",
+    "primefaces",
+    "javax.faces",
+    "j_idt",
+    "ui-widget"
+  ],
+  "view_state_count": 0,
+  "dataset_terms": [
+    {
+      "term": "TMC",
+      "occurrences": 9
+    },
+    {
+      "term": "TMC-2",
+      "occurrences": 7
+    },
+    {
+      "term": "OHRC",
+      "occurrences": 9
+    },
+    {
+      "term": "IIRS",
+      "occurrences": 7
+    },
+    {
+      "term": "NCF",
+      "occurrences": 0
+    },
+    {
+      "term": "NCN",
+      "occurrences": 0
+    },
+    {
+      "term": "NCA",
+      "occurrences": 1
+    },
+    {
+      "term": "browse",
+      "occurrences": 9
+    },
+    {
+      "term": "product",
+      "occurrences": 1
+    },
+    {
+      "term": "observation",
+      "occurrences": 1
+    },
+    {
+      "term": "orbit",
+      "occurrences": 22
+    },
+    {
+      "term": "download",
+      "occurrences": 19
+    }
+  ],
+  "external_scripts": [
+    "https://pradan.issdc.gov.in/ch2/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&v=6.1",
+    "https://pradan.issdc.gov.in/ch2/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&v=6.1",
+    "https://pradan.issdc.gov.in/ch2/javax.faces.resource/core.js.xhtml?ln=primefaces&v=6.1",
+    "https://pradan.issdc.gov.in/ch2/javax.faces.resource/components.js.xhtml?ln=primefaces&v=6.1",
+    "https://pradan.issdc.gov.in/ch2/javax.faces.resource/layout/layout.js.xhtml?ln=primefaces&v=6.1",
+    "https://pradan.issdc.gov.in/ch2/javax.faces.resource/pradan.js.xhtml?ln=scripts"
+  ],
+  "endpoint_clues": [
+    "http://www.w3.org/1999/xhtml",
+    "https://pradan.issdc.gov.in",
+    "https://www.issdc.gov.in/isda.html",
+    "https://www.issdc.gov.in",
+    "https://www.istrac.gov.in",
+    "https://www.isro.gov.in",
+    "https://chmapbrowse.issdc.gov.in",
+    "javax.faces.resource"
+  ]
+}

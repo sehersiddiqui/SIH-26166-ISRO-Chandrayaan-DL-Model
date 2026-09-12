@@ -1,0 +1,10 @@
+{
+  "url": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml?id=tmc2",
+  "status_code": 200,
+  "final_url": "https://idp.issdc.gov.in/auth/realms/issdc/protocol/openid-connect/auth?response_type=code&client_id=Pradan&redirect_uri=https%3A%2F%2Fpradan.issdc.gov.in%2Fch2%2Fprotected%2Fbrowse.xhtml?id%3Dtmc2&state=0d02c749-e2c9-4e95-9492-dfca8108bf38&login=true&scope=openid",
+  "content_size": 4270,
+  "title": "Sign in to Indian Space Science Data Center",
+  "is_login": true,
+  "tables": [],
+  "product_links": []
+}

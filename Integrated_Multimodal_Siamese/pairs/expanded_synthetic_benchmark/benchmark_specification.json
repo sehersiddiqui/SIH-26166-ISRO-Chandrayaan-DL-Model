@@ -1,0 +1,37 @@
+{
+  "benchmark_type": "controlled_embedding_domain_synthetic",
+  "real_empirical_component": "TMC-2 256-D encoder embeddings",
+  "synthetic_component": "IIRS/OHRC transformed latent views",
+  "geographic_correspondence_claim": false,
+  "n_real_tmc2_anchors": 400,
+  "embedding_dimension": 256,
+  "n_scenarios": 34,
+  "n_positive_examples": 13600,
+  "n_wrong_anchor_negatives": 13600,
+  "n_hard_negatives": 13600,
+  "scenario_families": [
+    "baseline",
+    "illumination",
+    "scale",
+    "viewpoint",
+    "noise",
+    "blur",
+    "contrast",
+    "partial_overlap",
+    "feature_corruption",
+    "outlier_contamination",
+    "quantization",
+    "combined_stress"
+  ],
+  "severity_levels": [
+    "baseline",
+    "mild",
+    "moderate",
+    "severe"
+  ],
+  "negative_types": [
+    "wrong_anchor",
+    "hard_negative"
+  ],
+  "note": "Illumination, scale, viewpoint, partial overlap and other effects are controlled embedding-domain simulations. They must not be interpreted as physically exact image-space or geographic simulations."
+}

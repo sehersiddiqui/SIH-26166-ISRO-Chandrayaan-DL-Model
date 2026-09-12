@@ -1,0 +1,102 @@
+{
+  "requested_url": "https://pradan.issdc.gov.in/ch2/",
+  "final_url": "https://pradan.issdc.gov.in/ch2/",
+  "status_code": 200,
+  "content_type": "text/html;charset=UTF-8",
+  "response_bytes": 31050,
+  "page_title": "Chandrayaan-II",
+  "n_links": 16,
+  "n_forms": 0,
+  "n_external_scripts": 6,
+  "links": [
+    {
+      "text": "Home",
+      "href": "#",
+      "url": "https://pradan.issdc.gov.in/ch2/"
+    },
+    {
+      "text": "CH2Browse",
+      "href": "/ch2/index.xhtml",
+      "url": "https://pradan.issdc.gov.in/ch2/index.xhtml"
+    },
+    {
+      "text": "PRADAN",
+      "href": "https://pradan.issdc.gov.in",
+      "url": "https://pradan.issdc.gov.in"
+    },
+    {
+      "text": "ISDA",
+      "href": "https://www.issdc.gov.in/isda.html",
+      "url": "https://www.issdc.gov.in/isda.html"
+    },
+    {
+      "text": "ISSDC",
+      "href": "https://www.issdc.gov.in",
+      "url": "https://www.issdc.gov.in"
+    },
+    {
+      "text": "ISTRAC",
+      "href": "https://www.istrac.gov.in",
+      "url": "https://www.istrac.gov.in"
+    },
+    {
+      "text": "ISRO",
+      "href": "https://www.isro.gov.in",
+      "url": "https://www.isro.gov.in"
+    },
+    {
+      "text": "Browse and Download",
+      "href": "/ch2/protected/payload.xhtml",
+      "url": "https://pradan.issdc.gov.in/ch2/protected/payload.xhtml"
+    },
+    {
+      "text": "History",
+      "href": "/ch2/protected/history.xhtml",
+      "url": "https://pradan.issdc.gov.in/ch2/protected/history.xhtml"
+    },
+    {
+      "text": "Statistics",
+      "href": "/ch2/protected/statistics.xhtml",
+      "url": "https://pradan.issdc.gov.in/ch2/protected/statistics.xhtml"
+    },
+    {
+      "text": "Other Downloads",
+      "href": "/ch2/protected/miscDownloads.xhtml",
+      "url": "https://pradan.issdc.gov.in/ch2/protected/miscDownloads.xhtml"
+    },
+    {
+      "text": "FAQ",
+      "href": "/ch2/faq.xhtml",
+      "url": "https://pradan.issdc.gov.in/ch2/faq.xhtml"
+    },
+    {
+      "text": "Acknowledgement",
+      "href": "/ch2/ack.xhtml",
+      "url": "https://pradan.issdc.gov.in/ch2/ack.xhtml"
+    },
+    {
+      "text": "Disclaimer",
+      "href": "/ch2/disclaimer.xhtml",
+      "url": "https://pradan.issdc.gov.in/ch2/disclaimer.xhtml"
+    },
+    {
+      "text": "Contacts",
+      "href": "/ch2/contacts.xhtml",
+      "url": "https://pradan.issdc.gov.in/ch2/contacts.xhtml"
+    },
+    {
+      "text": "Map View",
+      "href": "https://chmapbrowse.issdc.gov.in",
+      "url": "https://chmapbrowse.issdc.gov.in"
+    }
+  ],
+  "forms": [],
+  "external_scripts": [
+    "https://pradan.issdc.gov.in/ch2/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&v=6.1",
+    "https://pradan.issdc.gov.in/ch2/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&v=6.1",
+    "https://pradan.issdc.gov.in/ch2/javax.faces.resource/core.js.xhtml?ln=primefaces&v=6.1",
+    "https://pradan.issdc.gov.in/ch2/javax.faces.resource/components.js.xhtml?ln=primefaces&v=6.1",
+    "https://pradan.issdc.gov.in/ch2/javax.faces.resource/layout/layout.js.xhtml?ln=primefaces&v=6.1",
+    "https://pradan.issdc.gov.in/ch2/javax.faces.resource/pradan.js.xhtml?ln=scripts"
+  ]
+}

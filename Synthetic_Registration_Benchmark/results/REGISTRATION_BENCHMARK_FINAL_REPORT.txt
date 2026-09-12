@@ -1,0 +1,38 @@
+SYNTHETIC GEOMETRIC REGISTRATION BENCHMARK
+================================================================================
+
+STATUS: FROZEN
+
+DATASET
+Empirical anchors: 400
+Registration cases: 2000
+Case families: geometric_only, noise_stress, outlier_stress, overlap_stress, combined_stress
+Points per full case: 100
+
+RANSAC CONFIGURATION
+Selected reprojection threshold: 12.0 px
+Maximum iterations: 5000
+Confidence: 0.995
+
+FINAL PERFORMANCE
+Success rate: 0.8225
+Successful cases: 1645
+Median inlier RMSE: 0.0000 px
+Mean inlier RMSE: 1.9531 px
+Median inlier ratio: 0.9100
+Mean inlier ratio: 0.7764
+True-inlier precision: 0.9998
+True-inlier recall: 0.8973
+Mean rotation error: 0.0973 deg
+Mean scale error: 0.001592
+Mean translation error: 2.0290 px
+
+SUCCESS CRITERIA
+Inlier RMSE <= 10.0 px
+Rotation error <= 3.0 deg
+Scale error <= 0.050
+Translation error <= 15.0 px
+Inlier ratio >= 0.50
+
+SCIENTIFIC SCOPE
+This is a controlled synthetic geometric-registration benchmark derived from empirical TMC-2 embedding anchors. It evaluates robustness to geometric variation, localization noise, partial overlap, outlier contamination, and combined stress. It does not establish real-world cross-modal registration accuracy because the current OHRC, TMC-2, and IIRS datasets do not contain confirmed geographically overlapping cross-modal correspondences.

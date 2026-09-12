@@ -1,0 +1,976 @@
+observation_token,observation_time_utc,camera_count,cameras,NCA_filename,NCN_filename,NCF_filename,page_url,extraction_status,page_text
+20260227T1635363529,2026-02-27 16:35:36.352900+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260227T1635363529_d_img_d18.zip,ch2_tmc_ncn_20260227T1635363529_d_img_d18.zip,ch2_tmc_ncf_20260227T1635363529_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From   *     To   *	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.85"
+20260228T0422397099,2026-02-28 04:22:39.709900+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260228T0422397099_d_img_d18.zip,ch2_tmc_ncn_20260228T0422397099_d_img_d18.zip,ch2_tmc_ncf_20260228T0422397099_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml?id=tmc2,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From        To   	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z"
+20260226T1307537066,2026-02-26 13:07:53.706600+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260226T1307537066_d_img_d18.zip,ch2_tmc_ncn_20260226T1307537066_d_img_d18.zip,ch2_tmc_ncf_20260226T1307537066_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From   *     To   *	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.85"
+20260226T1305465680,2026-02-26 13:05:46.568000+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260226T1305465680_d_img_d18.zip,ch2_tmc_ncn_20260226T1305465680_d_img_d18.zip,ch2_tmc_ncf_20260226T1305465680_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From   *     To   *	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.85"
+20260228T1421324581,2026-02-28 14:21:32.458100+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260228T1421324581_d_img_d18.zip,ch2_tmc_ncn_20260228T1421324581_d_img_d18.zip,ch2_tmc_ncf_20260228T1421324581_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From   *     To   *	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.85"
+20260228T1807311508,2026-02-28 18:07:31.150800+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260228T1807311508_d_img_d18.zip,ch2_tmc_ncn_20260228T1807311508_d_img_d18.zip,ch2_tmc_ncf_20260228T1807311508_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From   *     To   *	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.85"
+20260301T0554299915,2026-03-01 05:54:29.991500+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260301T0554299915_d_img_d18.zip,ch2_tmc_ncn_20260301T0554299915_d_img_d18.zip,ch2_tmc_ncf_20260301T0554299915_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From   *     To   *	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.85"
+20260225T1136222850,2026-02-25 11:36:22.285000+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260225T1136222850_d_img_d18.zip,ch2_tmc_ncn_20260225T1136222850_d_img_d18.zip,ch2_tmc_ncf_20260225T1136222850_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From   *     To   *	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.85"
+20260224T2154414927,2026-02-24 21:54:41.492700+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260224T2154414927_d_img_d18.zip,ch2_tmc_ncn_20260224T2154414927_d_img_d18.zip,ch2_tmc_ncf_20260224T2154414927_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From   *     To   *	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.85"
+20260224T2146347662,2026-02-24 21:46:34.766200+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260224T2146347662_d_img_d18.zip,ch2_tmc_ncn_20260224T2146347662_d_img_d18.zip,ch2_tmc_ncf_20260224T2146347662_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From   *     To   *	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.85"
+20260302T0340193086,2026-03-02 03:40:19.308600+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260302T0340193086_d_img_d18.zip,ch2_tmc_ncn_20260302T0340193086_d_img_d18.zip,ch2_tmc_ncf_20260302T0340193086_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From   *     To   *	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.85"
+20260223T0828451072,2026-02-23 08:28:45.107200+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260223T0828451072_d_img_d18.zip,ch2_tmc_ncn_20260223T0828451072_d_img_d18.zip,ch2_tmc_ncf_20260223T0828451072_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From   *     To   *	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.85"
+20260222T0854315365,2026-02-22 08:54:31.536500+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260222T0854315365_d_img_d18.zip,ch2_tmc_ncn_20260222T0854315365_d_img_d18.zip,ch2_tmc_ncf_20260222T0854315365_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From   *     To   *	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.85"
+20260304T2219009193,2026-03-04 22:19:00.919300+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260304T2219009193_d_img_d18.zip,ch2_tmc_ncn_20260304T2219009193_d_img_d18.zip,ch2_tmc_ncf_20260304T2219009193_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From   *     To   *	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.85"
+20260221T2108418177,2026-02-21 21:08:41.817700+00:00,3,"NCA,NCN,NCF",ch2_tmc_nca_20260221T2108418177_d_img_d18.zip,ch2_tmc_ncn_20260221T2108418177_d_img_d18.zip,ch2_tmc_ncf_20260221T2108418177_d_img_d18.zip,https://pradan.issdc.gov.in/ch2/protected/browse.xhtml,NO_VALID_FOOTPRINT,"ISRO Science Data Archive (ISDA)
+Chandrayaan-II
+Home
+Browse and Download
+My Data Downloads
+Other Downloads
+FAQ
+Acknowledgement
+Disclaimer
+Contacts
+seher
+
+
+
+CH2Browse > Browse And Download > TMC-2
+Last released:  
+Aug 21, 2026
+
+Here is the TMC-2 User Guide to get you started. Shape files are available here.
+Sample 5m DEM. Try Chandrayaan-2 data map browse and download application.
+VIEW
+DOWNLOAD
+ 
+
+
+
+			
+
+Filename
+ObservationTime
+CreationTime
+ImagingOrbit
+OrbitLimbDirection
+LineExposureInMS
+AltitudeInKM
+CorrectedCoordinates
+	
+In
+Before
+After
+	From   *     To   *	
+   Clear
+
+
+Columns
+Data Products
+ 
+#	
+ 
+Filename	
+ 
+StartTime 	
+ 
+EndTime 	
+ 
+ProductSizeInBytes	
+ 
+AltitudeInKM	Info
+1	ch2_tmc_ncn_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.855Z	2026-08-13T06:35:37.133Z	1184864000	109.5	
+View
+
+2	ch2_tmc_nca_20260813T0627378526_d_img_d18.zip	2026-08-13T06:27:37.852Z	2026-08-13T06:35:37.136Z	1184880000	109.5	
+View
+
+3	ch2_tmc_ncf_20260813T0627378557_d_img_d18.zip	2026-08-13T06:27:37.85"

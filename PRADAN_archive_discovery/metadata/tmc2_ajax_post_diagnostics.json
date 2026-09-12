@@ -1,0 +1,20 @@
+{
+  "page": {
+    "title": "Chandrayaan-II",
+    "url": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml?id=tmc2"
+  },
+  "post_requests": [
+    {
+      "request_id": "20376.234",
+      "url": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml",
+      "method": "POST",
+      "resource_type": "XHR",
+      "post_data": "javax.faces.partial.ajax=true&javax.faces.source=tableForm%3Aj_idt223&javax.faces.partial.execute=tableForm%3Aj_idt223&javax.faces.partial.render=tableForm%3ArecommendationsTable&tableForm%3Aj_idt223=tableForm%3Aj_idt223&tableForm=tableForm&tableForm%3AlazyDocTable_rppDD=10&tableForm%3Aj_idt183=&tableForm%3AdocDetail_scrollState=0%2C0&tableForm%3AcolSelectList_source=ProductMD5Sum%3BSTRING%3Blabel.Product_Observational.File_Area_Observational.File.md5_checksum%3Bfalse&tableForm%3AcolSelectList_source=CreationTime%3BTIME%3Blabel.Product_Observational.File_Area_Observational.File.creation_date_time%3Bfalse&tableForm%3AcolSelectList_source=ImagingOrbit%3BINTEGER%3Blabel.Product_Observational.Observation_Area.Mission_Area.isda%3AProduct_Parameters.isda%3Aimaging_orbit_number%3Bfalse&tableForm%3AcolSelectList_source=LineExposureInMS%3BFLOAT%3Blabel.Product_Observational.Observation_Area.Mission_Area.isda%3AProduct_Parameters.isda%3Aline_exposure_duration.content%3Bfalse&tableForm%3AcolSelectList_source=OrbitLimbDirection%3BSTRING%3Blabel.Product_Observational.Observation_Area.Mission_Area.isda%3AProduct_Parameters.isda%3Aorbit_limb_direction%3Bfalse&tableForm%3AcolSelectList_target=Filename%3BSTRING%3Bfilename%3Bfalse&tableForm%3AcolSelectList_target=StartTime%3BTIME%3Blabel.Product_Observational.Observation_Area.Time_Coordinates.start_date_time%3Btrue&tableForm%3AcolSelectList_target=EndTime%3BTIME%3Blabel.Product_Observational.Observation_Area.Time_Coordinates.stop_date_time%3Btrue&tableForm%3AcolSelectList_target=ProductSizeInBytes%3BINTEGER%3Blabel.Product_Observational.File_Area_Observational.File.file_size.content%3Bfalse&tableForm%3AcolSelectList_target=AltitudeInKM%3BDOUBLE%3Blabel.Product_Observational.Observation_Area.Mission_Area.isda%3AProduct_Parameters.isda%3Aspacecraft_altitude.content%3Bfalse&tableForm%3Aj_idt206=length&tableForm%3Aj_idt209=10&tableForm%3AstartIndex-z=1&javax.faces.ViewState=6726230977085510023%3A-8404505785768765266",
+      "headers": {
+        "content_type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "accept": "application/xml, text/xml, */*; q=0.01",
+        "x_requested_with": "XMLHttpRequest"
+      }
+    }
+  ]
+}

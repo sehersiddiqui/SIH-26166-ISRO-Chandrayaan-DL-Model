@@ -1,0 +1,143 @@
+{
+  "requested_login_url": "https://idp.issdc.gov.in/auth/realms/issdc/protocol/openid-connect/auth?response_type=code&client_id=Pradan&redirect_uri=https%3A%2F%2Fpradan.issdc.gov.in%2Fch2%2Fprotected%2Fpayload.xhtml&state=11fe373f-cb4f-4dcc-9024-a947145564be&login=true&scope=openid",
+  "final_login_url": "https://idp.issdc.gov.in/auth/realms/issdc/protocol/openid-connect/auth?response_type=code&client_id=Pradan&redirect_uri=https%3A%2F%2Fpradan.issdc.gov.in%2Fch2%2Fprotected%2Fpayload.xhtml&state=11fe373f-cb4f-4dcc-9024-a947145564be&login=true&scope=openid",
+  "status_code": 200,
+  "content_type": "text/html;charset=utf-8",
+  "response_bytes": 4270,
+  "page_title": "Sign in to Indian Space Science Data Center",
+  "n_forms": 1,
+  "forms": [
+    {
+      "form_index": 0,
+      "id": "kc-form-login",
+      "name": null,
+      "method": "POST",
+      "action": "https://idp.issdc.gov.in/auth/realms/issdc/login-actions/authenticate?session_code=ozz2SSlXIvJ9ihbvIjkeXA-JdqK_coU3RhkvgbX-_IY&execution=4f75202b-ce79-477f-83e4-f05fbc4f5eb6&client_id=Pradan&tab_id=2fKpDlYsAr4",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "username",
+          "id": "username",
+          "value_present": true
+        },
+        {
+          "tag": "input",
+          "type": "password",
+          "name": "password",
+          "id": "password",
+          "value_present": false
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "credentialId",
+          "id": "id-hidden-input",
+          "value_present": false
+        },
+        {
+          "tag": "input",
+          "type": "submit",
+          "name": "login",
+          "id": "kc-login",
+          "value_present": true
+        }
+      ]
+    }
+  ],
+  "oidc_parameters": [
+    {
+      "parameter": "response_type",
+      "value": "code"
+    },
+    {
+      "parameter": "client_id",
+      "value": "Pradan"
+    },
+    {
+      "parameter": "redirect_uri",
+      "value": "https://pradan.issdc.gov.in/ch2/protected/payload.xhtml"
+    },
+    {
+      "parameter": "state",
+      "value": "11fe373f-cb4f-4dcc-9024-a947145564be"
+    },
+    {
+      "parameter": "login",
+      "value": "true"
+    },
+    {
+      "parameter": "scope",
+      "value": "openid"
+    }
+  ],
+  "hidden_inputs": [
+    {
+      "name": "credentialId",
+      "value_length": 0
+    }
+  ],
+  "cookies": [
+    {
+      "name": "JSESSIONID",
+      "domain": "pradan.issdc.gov.in",
+      "path": "/ch2",
+      "secure": true,
+      "expires": null
+    },
+    {
+      "name": "FGTServer",
+      "domain": "pradan.issdc.gov.in",
+      "path": "/ch2/",
+      "secure": false,
+      "expires": 1788635988
+    },
+    {
+      "name": "OAuth_Token_Request_State",
+      "domain": "pradan.issdc.gov.in",
+      "path": "/",
+      "secure": true,
+      "expires": null
+    },
+    {
+      "name": "FGTServer",
+      "domain": "pradan.issdc.gov.in",
+      "path": "/ch2/protected/",
+      "secure": false,
+      "expires": 1788636063
+    },
+    {
+      "name": "AUTH_SESSION_ID",
+      "domain": "idp.issdc.gov.in",
+      "path": "/auth/realms/issdc/",
+      "secure": true,
+      "expires": null
+    },
+    {
+      "name": "AUTH_SESSION_ID_LEGACY",
+      "domain": "idp.issdc.gov.in",
+      "path": "/auth/realms/issdc/",
+      "secure": true,
+      "expires": null
+    },
+    {
+      "name": "KC_RESTART",
+      "domain": "idp.issdc.gov.in",
+      "path": "/auth/realms/issdc/",
+      "secure": true,
+      "expires": null
+    }
+  ],
+  "oidc_discovery_url": "https://idp.issdc.gov.in/auth/realms/issdc/.well-known/openid-configuration",
+  "oidc_discovery_available": true,
+  "oidc_endpoints": {
+    "issuer": "https://idp.issdc.gov.in/auth/realms/issdc",
+    "authorization_endpoint": "https://idp.issdc.gov.in/auth/realms/issdc/protocol/openid-connect/auth",
+    "token_endpoint": "https://idp.issdc.gov.in/auth/realms/issdc/protocol/openid-connect/token",
+    "userinfo_endpoint": "https://idp.issdc.gov.in/auth/realms/issdc/protocol/openid-connect/userinfo",
+    "end_session_endpoint": "https://idp.issdc.gov.in/auth/realms/issdc/protocol/openid-connect/logout",
+    "jwks_uri": "https://idp.issdc.gov.in/auth/realms/issdc/protocol/openid-connect/certs",
+    "check_session_iframe": "https://idp.issdc.gov.in/auth/realms/issdc/protocol/openid-connect/login-status-iframe.html",
+    "registration_endpoint": "https://idp.issdc.gov.in/auth/realms/issdc/clients-registrations/openid-connect"
+  }
+}

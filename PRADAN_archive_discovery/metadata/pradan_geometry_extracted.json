@@ -1,0 +1,35 @@
+{
+  "source_url": "https://pradan.issdc.gov.in/ch2/protected/browse.xhtml?id=tmc2",
+  "geometry_status": "COMPLETE",
+  "valid_corner_count": 4,
+  "coordinates": {
+    "upper_left_latitude": 29.28,
+    "upper_left_longitude": 124.3,
+    "upper_right_latitude": 29.28,
+    "upper_right_longitude": 124.3,
+    "lower_left_latitude": 29.28,
+    "lower_left_longitude": 124.3,
+    "lower_right_latitude": 29.28,
+    "lower_right_longitude": 124.3
+  },
+  "corners": {
+    "upper_left": {
+      "latitude": 29.28,
+      "longitude": 124.3
+    },
+    "upper_right": {
+      "latitude": 29.28,
+      "longitude": 124.3
+    },
+    "lower_left": {
+      "latitude": 29.28,
+      "longitude": 124.3
+    },
+    "lower_right": {
+      "latitude": 29.28,
+      "longitude": 124.3
+    }
+  },
+  "html_path": "D:\\ISRO\\PRADAN_archive_discovery\\metadata\\pradan_geometry_page.html",
+  "snippet_path": "D:\\ISRO\\PRADAN_archive_discovery\\metadata\\pradan_geometry_snippets.txt"
+}

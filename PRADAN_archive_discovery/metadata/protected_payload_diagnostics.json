@@ -1,0 +1,106 @@
+{
+  "requested_url": "https://pradan.issdc.gov.in/ch2/protected/payload.xhtml",
+  "final_url": "https://idp.issdc.gov.in/auth/realms/issdc/protocol/openid-connect/auth?response_type=code&client_id=Pradan&redirect_uri=https%3A%2F%2Fpradan.issdc.gov.in%2Fch2%2Fprotected%2Fpayload.xhtml&state=11fe373f-cb4f-4dcc-9024-a947145564be&login=true&scope=openid",
+  "status_code": 200,
+  "content_type": "text/html;charset=utf-8",
+  "response_bytes": 4270,
+  "redirect_count": 1,
+  "redirected_to_login": true,
+  "page_title": "Sign in to Indian Space Science Data Center",
+  "auth_keywords": {
+    "login": [
+      "login",
+      "sign in"
+    ],
+    "credentials": [
+      "username",
+      "password"
+    ],
+    "authentication": [],
+    "protected": []
+  },
+  "n_links": 2,
+  "n_inputs": 4,
+  "n_forms": 1,
+  "primefaces_indicators": [],
+  "view_state_count": 0,
+  "archive_terms": [
+    {
+      "term": "payload",
+      "occurrences": 0
+    },
+    {
+      "term": "browse",
+      "occurrences": 0
+    },
+    {
+      "term": "download",
+      "occurrences": 0
+    },
+    {
+      "term": "product",
+      "occurrences": 0
+    },
+    {
+      "term": "observation",
+      "occurrences": 0
+    },
+    {
+      "term": "orbit",
+      "occurrences": 0
+    },
+    {
+      "term": "acquisition",
+      "occurrences": 0
+    },
+    {
+      "term": "camera",
+      "occurrences": 0
+    },
+    {
+      "term": "TMC",
+      "occurrences": 0
+    },
+    {
+      "term": "TMC-2",
+      "occurrences": 0
+    },
+    {
+      "term": "OHRC",
+      "occurrences": 0
+    },
+    {
+      "term": "IIRS",
+      "occurrences": 0
+    },
+    {
+      "term": "NCA",
+      "occurrences": 0
+    },
+    {
+      "term": "NCN",
+      "occurrences": 0
+    },
+    {
+      "term": "NCF",
+      "occurrences": 0
+    },
+    {
+      "term": "search",
+      "occurrences": 0
+    },
+    {
+      "term": "date",
+      "occurrences": 0
+    },
+    {
+      "term": "from",
+      "occurrences": 0
+    },
+    {
+      "term": "to",
+      "occurrences": 7
+    }
+  ],
+  "external_scripts": []
+}

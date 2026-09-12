@@ -1,0 +1,38 @@
+# Chrome profile data — do not upload
+Chrome_PRADAN_Profile/
+Chrome_PRADAN_Profile_2/
+
+# Python cache and virtual environments
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Environment secrets
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
+
+# Large datasets
+# Uncomment if you do not want raw image datasets uploaded
+# IIRS_raws/
+# IIRS_tiles/
+# OHRC_raws/
+# OHRC_tiles/
+# TMC_raws/
+# TMC_tiles/
+
+# Large trained model files
+# *.h5
+# *.hdf5
+# *.pt
+# *.pth
+# *.ckpt
