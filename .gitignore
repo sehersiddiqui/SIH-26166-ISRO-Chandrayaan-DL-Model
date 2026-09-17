@@ -31,8 +31,8 @@ TMC_raws/
 TMC_tiles/
 
 # Large trained model files
-# *.h5
-# *.hdf5
-# *.pt
-# *.pth
-# *.ckpt
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.ckpt
