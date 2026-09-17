@@ -23,12 +23,12 @@ node_modules/
 
 # Large datasets
 # Uncomment if you do not want raw image datasets uploaded
-# IIRS_raws/
-# IIRS_tiles/
-# OHRC_raws/
+IIRS_raws/
+IIRS_tiles/
+OHRC_raws/
 # OHRC_tiles/
-# TMC_raws/
-# TMC_tiles/
+TMC_raws/
+TMC_tiles/
 
 # Large trained model files
 # *.h5
