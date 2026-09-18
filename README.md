@@ -1021,9 +1021,9 @@ Additional references and implementation resources are documented in the project
 
 The complete technical report contains the detailed methodology, architecture, technology stack, validation, feasibility analysis, novelty discussion, impact analysis and references.
 
-**Official repository:**
+**Detailed Report:**
 
-https://github.com/sehersiddiqui/SIH-26166-ISRO-Chandrayaan-DL-Model
+https://drive.google.com/drive/folders/12KGtlKd3MlvyETMvqET6z-VJurLj_UKf?usp=sharing
 
 ---
 
